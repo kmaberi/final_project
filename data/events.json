@@ -1,0 +1,224 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "year": 2023,
+      "title": "KCCA FC Clinches Uganda Premier League Title",
+      "description": "KCCA FC secured their 13th Uganda Premier League championship with a commanding performance throughout the season, finishing ahead of rivals with consistent victories.",
+      "image": null,
+      "source": "FUFA Official Records",
+      "tags": ["league", "championship", "kcca"],
+      "team": "KCCA FC",
+      "type": "league"
+    },
+    {
+      "id": 2,
+      "year": 2022,
+      "title": "Vipers SC Wins Double Crown",
+      "description": "Vipers SC achieved a historic double, winning both the Uganda Premier League and the Uganda Cup in the same season, marking their dominance in Ugandan football.",
+      "image": null,
+      "source": "Uganda Sports Media",
+      "tags": ["league", "cup", "double", "vipers"],
+      "team": "Vipers SC",
+      "type": "league"
+    },
+    {
+      "id": 3,
+      "year": 2021,
+      "title": "Express FC Returns to Top Flight",
+      "description": "Express FC made a triumphant return to the Uganda Premier League after their promotion, bringing back one of Uganda's most historic clubs to the top division.",
+      "image": null,
+      "source": "FUFA",
+      "tags": ["promotion", "express"],
+      "team": "Express FC",
+      "type": "league"
+    },
+    {
+      "id": 4,
+      "year": 2020,
+      "title": "COVID-19 Season Disruption",
+      "description": "The Uganda Premier League season was halted due to the COVID-19 pandemic, leading to significant disruptions in Ugandan football activities.",
+      "image": null,
+      "source": "FUFA Press Release",
+      "tags": ["pandemic", "disruption"],
+      "team": null,
+      "type": "league"
+    },
+    {
+      "id": 5,
+      "year": 2019,
+      "title": "Uganda Cranes AFCON Campaign",
+      "description": "The Uganda Cranes participated in the Africa Cup of Nations in Egypt, reaching the Round of 16 and showcasing Ugandan talent on the continental stage.",
+      "image": null,
+      "source": "CAF Official",
+      "tags": ["international", "afcon", "cranes"],
+      "team": "Uganda Cranes",
+      "type": "international"
+    },
+    {
+      "id": 6,
+      "year": 2018,
+      "title": "KCCA FC CAF Champions League Journey",
+      "description": "KCCA FC made history by reaching the group stages of the CAF Champions League, becoming the first Ugandan team to achieve this milestone in years.",
+      "image": null,
+      "source": "CAF",
+      "tags": ["international", "caf", "kcca"],
+      "team": "KCCA FC",
+      "type": "international"
+    },
+    {
+      "id": 7,
+      "year": 2017,
+      "title": "Uganda Cup Final Drama",
+      "description": "An exciting Uganda Cup final saw KCCA FC defeat Vipers SC in a penalty shootout after a thrilling match that ended in a draw.",
+      "image": null,
+      "source": "Uganda Football Federation",
+      "tags": ["cup", "final", "kcca", "vipers"],
+      "team": "KCCA FC",
+      "type": "cup"
+    },
+    {
+      "id": 8,
+      "year": 2016,
+      "title": "SC Villa's Resurgence",
+      "description": "SC Villa showed signs of revival with improved performances and fan engagement, marking a new era for the historic club.",
+      "image": null,
+      "source": "Local Sports Press",
+      "tags": ["villa", "revival"],
+      "team": "SC Villa",
+      "type": "league"
+    },
+    {
+      "id": 9,
+      "year": 2015,
+      "title": "New Stadium Infrastructure Development",
+      "description": "Major investments were made in stadium infrastructure across Uganda, improving facilities for both clubs and the national team.",
+      "image": null,
+      "source": "Ministry of Sports",
+      "tags": ["infrastructure", "development"],
+      "team": null,
+      "type": "league"
+    },
+    {
+      "id": 10,
+      "year": 2014,
+      "title": "URA FC Wins Uganda Cup",
+      "description": "URA FC lifted the Uganda Cup trophy, defeating Express FC in a competitive final match.",
+      "image": null,
+      "source": "FUFA",
+      "tags": ["cup", "ura"],
+      "team": "URA FC",
+      "type": "cup"
+    },
+    {
+      "id": 11,
+      "year": 2013,
+      "title": "Vipers SC Founded",
+      "description": "Vipers SC was officially founded, beginning a journey that would see them become one of Uganda's most successful clubs.",
+      "image": null,
+      "source": "Club Records",
+      "tags": ["founding", "vipers"],
+      "team": "Vipers SC",
+      "type": "league"
+    },
+    {
+      "id": 12,
+      "year": 2010,
+      "title": "Express FC Century Celebration",
+      "description": "Express FC celebrated their rich history and contribution to Ugandan football with special commemorative events.",
+      "image": null,
+      "source": "Express FC Archives",
+      "tags": ["anniversary", "express"],
+      "team": "Express FC",
+      "type": "league"
+    },
+    {
+      "id": 13,
+      "year": 2005,
+      "title": "Youth Development Program Launch",
+      "description": "FUFA launched a comprehensive youth development program aimed at nurturing young Ugandan football talent from grassroots level.",
+      "image": null,
+      "source": "FUFA Youth Division",
+      "tags": ["youth", "development"],
+      "team": null,
+      "type": "league"
+    },
+    {
+      "id": 14,
+      "year": 2000,
+      "title": "Millennium Football Revival",
+      "description": "The new millennium brought renewed interest and investment in Ugandan football, with improved league structures and competitions.",
+      "image": null,
+      "source": "Uganda Football History",
+      "tags": ["revival", "millennium"],
+      "team": null,
+      "type": "league"
+    },
+    {
+      "id": 15,
+      "year": 1995,
+      "title": "SC Villa Golden Era Begins",
+      "description": "SC Villa entered a golden era, winning multiple championships and establishing themselves as a dominant force in Ugandan football.",
+      "image": null,
+      "source": "SC Villa Records",
+      "tags": ["villa", "championship"],
+      "team": "SC Villa",
+      "type": "league"
+    },
+    {
+      "id": 16,
+      "year": 1990,
+      "title": "Professional League Formation",
+      "description": "The Uganda Premier League was restructured into a more professional format, improving standards and organization.",
+      "image": null,
+      "source": "FUFA Historical Records",
+      "tags": ["professional", "reform"],
+      "team": null,
+      "type": "league"
+    },
+    {
+      "id": 17,
+      "year": 1978,
+      "title": "Uganda Cranes AFCON Triumph",
+      "description": "The Uganda Cranes won the Africa Cup of Nations, defeating Ghana 2-0 in the final to claim Uganda's first and only AFCON title.",
+      "image": null,
+      "source": "CAF Archives",
+      "tags": ["international", "afcon", "championship", "cranes"],
+      "team": "Uganda Cranes",
+      "type": "international"
+    },
+    {
+      "id": 18,
+      "year": 1975,
+      "title": "SC Villa Founded",
+      "description": "SC Villa was established, beginning their journey to become one of Uganda's most successful and beloved football clubs.",
+      "image": null,
+      "source": "SC Villa Official",
+      "tags": ["founding", "villa"],
+      "team": "SC Villa",
+      "type": "league"
+    },
+    {
+      "id": 19,
+      "year": 1963,
+      "title": "KCCA FC Established",
+      "description": "Kampala City Council Authority Football Club (KCCA FC) was founded, marking the beginning of one of Uganda's most successful clubs.",
+      "image": null,
+      "source": "KCCA FC Archives",
+      "tags": ["founding", "kcca"],
+      "team": "KCCA FC",
+      "type": "league"
+    },
+    {
+      "id": 20,
+      "year": 1957,
+      "title": "Express FC Founded",
+      "description": "Express FC was established, becoming one of the oldest and most historic football clubs in Uganda.",
+      "image": null,
+      "source": "Express FC Historical Records",
+      "tags": ["founding", "express"],
+      "team": "Express FC",
+      "type": "league"
+    }
+  ]
+}
