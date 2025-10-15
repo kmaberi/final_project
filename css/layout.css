@@ -83,6 +83,32 @@
     left: 0;
 }
 
+/* Header scroll effects */
+.desktop-header.scrolled,
+.mobile-header.scrolled {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+.desktop-header.hidden,
+.mobile-header.hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+/* Search loading and empty states */
+.search-loading,
+.search-empty,
+.search-error {
+    text-align: center;
+    padding: 2rem;
+    color: #6b7280;
+}
+
+.search-loading .spinner {
+    margin: 0 auto 1rem;
+}
+
 .mobile-menu-link {
     display: block;
     padding: 1rem 2rem;

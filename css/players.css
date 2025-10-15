@@ -1,0 +1,428 @@
+/* Players Page Styles - Uganda Footy Hub */
+
+/* CSS Variables aligned with project theme */
+:root {
+    --player-accent: #0b6cff;
+    --player-muted: #6b7280;
+    --player-card: #ffffff;
+    --player-bg: #f5f7fb;
+    --player-radius: 14px;
+}
+
+/* Page Layout */
+.players-page {
+    min-height: 100vh;
+    background: var(--bg-color);
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.players-page .container {
+    max-width: 1100px;
+    margin: 28px auto;
+    padding: 20px;
+}
+
+.players-page .card {
+    background: var(--player-card);
+    border-radius: var(--player-radius);
+    box-shadow: 0 6px 20px rgba(12, 20, 40, 0.06);
+    padding: 18px;
+    transition: var(--transition);
+}
+
+.players-page .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(12, 20, 40, 0.1);
+}
+
+/* Player Hero Section */
+.player-hero {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 18px;
+    align-items: center;
+}
+
+.avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex: 0 0 180px;
+    position: relative;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: var(--transition);
+}
+
+.avatar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 60%, rgba(11, 108, 255, 0.1));
+    pointer-events: none;
+}
+
+/* Player Title and Info */
+.player-title h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.player-title p {
+    margin: 6px 0;
+    color: var(--player-muted);
+    font-size: 1rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--player-accent), #36a3ff);
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(11, 108, 255, 0.3);
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.stat {
+    background: #f8fafc;
+    padding: 16px 12px;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: var(--transition);
+}
+
+.stat:hover {
+    border-color: var(--player-accent);
+    background: white;
+}
+
+.stat strong {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.stat small {
+    color: var(--player-muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Main Layout Grid */
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+/* Content Sections */
+.heading {
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.muted-block {
+    color: var(--player-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Career Timeline */
+.timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--player-accent), transparent);
+}
+
+.timeline li {
+    padding: 15px 0 15px 30px;
+    border-bottom: 1px dashed #e6e9ef;
+    position: relative;
+}
+
+.timeline li::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 20px;
+    width: 10px;
+    height: 10px;
+    background: var(--player-accent);
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px var(--player-accent);
+}
+
+.timeline li:last-child {
+    border-bottom: none;
+}
+
+.timeline time {
+    display: block;
+    color: var(--player-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.timeline strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Match History Table */
+.match-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+.match-table th,
+.match-table td {
+    padding: 12px 10px;
+    text-align: left;
+    border-bottom: 1px solid #eef2f7;
+}
+
+.match-table th {
+    background: #fbfdff;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.match-table tbody tr:hover {
+    background: var(--bg-color);
+}
+
+.match-table .rating {
+    font-weight: 700;
+    color: var(--player-accent);
+}
+
+/* Player Details Sidebar */
+.player-details .card {
+    margin-bottom: 16px;
+}
+
+.player-details h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: var(--primary-color);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.player-details p {
+    margin: 8px 0;
+    color: var(--player-muted);
+    font-size: 0.9rem;
+}
+
+.player-details strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.player-details a {
+    color: var(--player-accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.player-details a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* Bottom Navigation Compatibility */
+.bottom-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: 12px;
+}
+
+.bottom-nav svg {
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .player-hero {
+        grid-template-columns: 120px 1fr;
+        gap: 16px;
+    }
+    
+    .avatar {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .main-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .player-title h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .players-page .container {
+        padding: 15px;
+        margin: 15px auto;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .stat {
+        padding: 12px 8px;
+    }
+    
+    .stat strong {
+        font-size: 1.2rem;
+    }
+    
+    .timeline li {
+        padding-left: 25px;
+    }
+    
+    .timeline::before {
+        left: 8px;
+    }
+    
+    .timeline li::before {
+        left: 4px;
+        width: 8px;
+        height: 8px;
+    }
+}
+
+@media (max-width: 420px) {
+    .player-hero {
+        grid-template-columns: 100px 1fr;
+        gap: 12px;
+    }
+    
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .player-title h1 {
+        font-size: 1.3rem;
+    }
+    
+    .badge {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+}
+
+/* Player Status Indicators */
+.player-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.player-status.active {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.player-status.injured {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.player-status.retired {
+    background: #f3f4f6;
+    color: #4b5563;
+}
+
+/* Performance Indicators */
+.performance-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.performance-indicator.excellent {
+    background: #10b981;
+}
+
+.performance-indicator.good {
+    background: #f59e0b;
+}
+
+.performance-indicator.average {
+    background: #6b7280;
+}
+
+.performance-indicator.poor {
+    background: #ef4444;
+}
