@@ -70,7 +70,16 @@ async function loadNewsData() {
         if (loading) loading.style.display = 'none';
     }
 }
-
+fetch('data/news.json')
+    .then(response => response.json())
+    .then(data => { allNews = data; filteredNews = data; displayFeaturedPost(); displayNewsGrid(); })
+    .catch(error => { console.error('Error loading news:', error); showError(); })
+    .finally(() => { if (loading) loading.style.display = 'none'; });
+fetch('data/players.json')
+    .then(response => response.json())
+    .then(data => { allPlayers = data; displayPlayerList(); })
+    .catch(error => { console.error('Error loading players:', error); showError(); })
+    .finally(() => { if (loading) loading.style.display = 'none'; });
 // Display Featured Post
 function displayFeaturedPost() {
     const featuredContainer = document.getElementById('featuredPost');

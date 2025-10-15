@@ -1,0 +1,120 @@
+IMAGE ORGANIZATION GUIDE - Uganda Footy Hub
+===========================================
+
+📁 FOLDER STRUCTURE TO CREATE:
+------------------------------
+
+images/
+├── logo.svg                    (Your main logo)
+├── favicon.ico                 (Browser tab icon)
+├── teams/
+│   ├── kcca-badge.png         (KCCA FC badge)
+│   ├── vipers-badge.png       (Vipers SC badge)
+│   ├── villa-badge.png        (SC Villa badge)
+│   ├── express-badge.png      (Express FC badge)
+│   ├── ura-badge.png          (URA FC badge)
+│   ├── updf-badge.png         (UPDF FC badge)
+│   ├── busoga-badge.png       (Busoga United badge)
+│   └── bul-badge.png          (BUL FC badge)
+├── stadiums/
+│   ├── mtn-omondi-stadium.jpg
+│   ├── st-marys-kitende.jpg
+│   ├── wankulukuku-stadium.jpg
+│   ├── mandela-stadium.jpg
+│   ├── bombo-stadium.jpg
+│   └── fufa-technical-centre.jpg
+├── players/
+│   ├── denis-onyango.jpg
+│   ├── emmanuel-okwi.jpg
+│   ├── farouk-miya.jpg
+│   ├── derrick-nsibambi.jpg
+│   ├── allan-kyambadde.jpg
+│   ├── khalid-aucho.jpg
+│   ├── milton-karisa.jpg
+│   ├── brian-aheebwa.jpg
+│   ├── moses-waiswa.jpg
+│   ├── joseph-ochaya.jpg
+│   ├── bevis-mugabi.jpg
+│   └── timothy-awanyi.jpg
+└── events/
+    ├── kcca-2018-champions.jpg
+    ├── vipers-2022-double.jpg
+    ├── villa-golden-era.jpg
+    ├── express-1982-title.jpg
+    ├── uganda-afcon-1978.jpg
+    ├── kcca-champions-league.jpg
+    ├── cecafa-victories.jpg
+    ├── fufa-formation.jpg
+    ├── womens-football-growth.jpg
+    ├── youth-tournaments.jpg
+    ├── stadium-developments.jpg
+    ├── international-achievements.jpg
+    ├── coach-appointments.jpg
+    ├── player-transfers.jpg
+    ├── cup-victories.jpg
+    ├── derby-matches.jpg
+    ├── continental-progress.jpg
+    ├── grassroots-initiatives.jpg
+    ├── media-partnerships.jpg
+    └── fan-culture.jpg
+
+🔍 WHERE TO FIND IMAGES:
+-----------------------
+
+1. TEAM BADGES:
+   - Official club websites
+   - Wikipedia team pages
+   - TheSportsDB.com
+   - Google Images (search "KCCA FC badge PNG")
+
+2. STADIUMS:
+   - Google Images (search "MTN Omondi Stadium")
+   - Wikipedia stadium pages
+   - Tourism Uganda websites
+   - News articles about stadiums
+
+3. PLAYERS:
+   - Player Wikipedia pages
+   - Official club websites
+   - Sports news websites
+   - CAF (African football) websites
+
+4. EVENTS:
+   - Sports news archives
+   - Wikipedia historical articles
+   - YouTube video thumbnails
+   - Club achievement photos
+
+📥 DOWNLOAD TIPS:
+----------------
+
+• Use PNG format for badges (transparent backgrounds)
+• Use JPG format for photos (stadiums, players, events)
+• Aim for 300x300px minimum for badges
+• Aim for 800x600px minimum for photos
+• Save with exact filenames shown above
+• Create placeholder images if some are missing
+
+🚨 IMPORTANT NOTES:
+------------------
+
+• The website works WITHOUT images (shows nice icons instead)
+• Add images gradually as you find them
+• Use consistent naming as shown in JSON files
+• Compress large images to keep site fast
+• Consider copyright - use freely available images
+
+🎯 PRIORITY ORDER:
+-----------------
+
+1. Team badges (most visible)
+2. Player photos (for profiles)
+3. Stadium images (for team details)
+4. Event images (for timeline)
+5. Logo and favicon (branding)
+
+Your site will display beautiful placeholder icons (⚽🏟️👤📸) 
+for any missing images, so don't worry if you can't find everything!
+
+The important thing is that all the IMAGE PATHS are correctly 
+set up in the JSON files - which they are! ✅

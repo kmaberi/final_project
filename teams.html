@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Latest Uganda football news and updates">
-    <title>News - Uganda Footy Hub</title>
+    <meta name="description" content="Explore all Ugandan football teams">
+    <title>Teams - Uganda Footy Hub</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/news.css">
-    <link rel="stylesheet" href="css/about.css">    
+    <link rel="stylesheet" href="css/teams.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 </head>
 <body>
@@ -20,7 +19,7 @@
         </button>
         <div class="logo-container">
             <img src="images/logo.svg" alt="Uganda Footy Hub" class="logo" onerror="this.style.display='none'">
-            <span class="logo-text">News</span>
+            <span class="logo-text">Teams</span>
         </div>
         <button class="search-toggle" id="mobileSearchToggle" aria-label="Toggle search">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -40,9 +39,9 @@
             <nav class="main-nav">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="timeline.html" class="nav-link">Timeline</a>
-                <a href="teams.html" class="nav-link">Teams</a>
+                <a href="teams.html" class="nav-link active">Teams</a>
                 <a href="players.html" class="nav-link">Players</a>
-                <a href="news.html" class="nav-link active">News</a>
+                <a href="news.html" class="nav-link">News</a>
                 <a href="about.html" class="nav-link">About</a>
                 <a href="authentication.html" class="nav-link">Login / Sign Up</a>
                 <a href="team-detail.html" class="nav-link">Team Detail</a>
@@ -55,7 +54,7 @@
                         <circle cx="11" cy="11" r="8"></circle>
                         <path d="m21 21-4.35-4.35"></path>
                     </svg>
-                    <input type="text" placeholder="Search news..." id="desktopSearch">
+                    <input type="text" placeholder="Search teams..." id="desktopSearch">
                 </div>
                 <a href="authentication.html" class="user-btn" id="userBtn">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -70,7 +69,7 @@
     <!-- Mobile Search Overlay -->
     <div class="mobile-search-overlay" id="mobileSearchOverlay">
         <div class="mobile-search-container">
-            <input type="text" placeholder="Search news..." id="mobileSearch">
+            <input type="text" placeholder="Search teams..." id="mobileSearch">
             <button class="close-search" id="closeSearch">&times;</button>
         </div>
         <div id="searchResults" class="search-results"></div>
@@ -80,86 +79,69 @@
     <nav class="mobile-menu" id="mobileMenu">
         <a href="index.html" class="mobile-menu-link">Home</a>
         <a href="timeline.html" class="mobile-menu-link">Timeline</a>
-        <a href="pages/teams.html" class="mobile-menu-link">Teams</a>
-        <a href="pages/players.html" class="mobile-menu-link">Players</a>
-        <a href="pages/news.html" class="mobile-menu-link active">News</a>
-        <a href="pages/about.html" class="mobile-menu-link">About</a>
-        <a href="pages/authentication.html" class="mobile-menu-link">Login / Sign Up</a>
+        <a href="teams.html" class="mobile-menu-link active">Teams</a>
+        <a href="players.html" class="mobile-menu-link">Players</a>
+        <a href="news.html" class="mobile-menu-link">News</a>
+        <a href="about.html" class="mobile-menu-link">About</a>
+        <a href="authentication.html" class="mobile-menu-link">Login / Sign Up</a>
     </nav>
 
-    <main class="news-page">
+    <main class="teams-page">
         <!-- Page Header -->
         <section class="page-hero">
             <div class="container">
-                <h1>Latest Football News</h1>
-                <p>Stay updated with Uganda's football scene</p>
+                <h1>Ugandan Football Teams</h1>
+                <p>Explore the clubs that make Ugandan football special</p>
             </div>
         </section>
 
         <div class="container">
-            <!-- Category Filters -->
-            <div class="category-nav">
-                <button class="category-btn active" data-category="all">All News</button>
-                <button class="category-btn" data-category="teams">Teams</button>
-                <button class="category-btn" data-category="players">Players</button>
-                <button class="category-btn" data-category="matches">Matches</button>
-                <button class="category-btn" data-category="transfers">Transfers</button>
-                <button class="category-btn" data-category="international">International</button>
-            </div>
-
-            <!-- News Layout -->
-            <div class="news-layout">
-                <!-- Main News Feed -->
-                <div class="news-feed">
-                    <!-- Featured Post -->
-                    <article class="featured-post" id="featuredPost">
-                        <!-- Populated by JS -->
-                    </article>
-
-                    <!-- News Posts Grid -->
-                    <div class="news-grid" id="newsGrid">
-                        <!-- Populated by JS -->
-                    </div>
-
-                    <div class="loading" id="newsLoading">
-                        <div class="spinner"></div>
-                        <p>Loading news...</p>
-                    </div>
-
-                    <!-- Load More -->
-                    <div class="load-more-container">
-                        <button class="btn btn-secondary" id="loadMoreBtn">Load More Articles</button>
-                    </div>
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                        Grid
+                    </button>
+                    <button class="view-btn" data-view="list">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="8" y1="6" x2="21" y2="6"></line>
+                            <line x1="8" y1="12" x2="21" y2="12"></line>
+                            <line x1="8" y1="18" x2="21" y2="18"></line>
+                            <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                            <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                            <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                        </svg>
+                        List
+                    </button>
                 </div>
 
-                <!-- Sidebar -->
-                <aside class="news-sidebar">
-                    <!-- Trending Topics -->
-                    <div class="sidebar-widget">
-                        <h3>🔥 Trending Now</h3>
-                        <div class="trending-list" id="trendingList">
-                            <!-- Populated by JS -->
-                        </div>
-                    </div>
+                <select class="sort-select" id="sortSelect">
+                    <option value="name">Sort by Name</option>
+                    <option value="founded">Sort by Founded Date</option>
+                    <option value="trophies">Sort by Trophies</option>
+                </select>
 
-                    <!-- Top Teams -->
-                    <div class="sidebar-widget">
-                        <h3>⭐ Top Teams</h3>
-                        <div class="top-teams-list" id="topTeamsList">
-                            <!-- Populated by JS -->
-                        </div>
-                    </div>
+                <div class="filter-chips">
+                    <button class="filter-chip active" data-league="all">All Teams</button>
+                    <button class="filter-chip" data-league="premier">Premier League</button>
+                    <button class="filter-chip" data-league="big-league">Big League</button>
+                </div>
+            </div>
 
-                    <!-- Newsletter -->
-                    <div class="sidebar-widget newsletter-widget">
-                        <h3>📧 Newsletter</h3>
-                        <p>Get daily football updates delivered to your inbox</p>
-                        <form class="newsletter-form" id="newsletterForm">
-                            <input type="email" placeholder="Your email" required>
-                            <button type="submit" class="btn btn-primary btn-block">Subscribe</button>
-                        </form>
-                    </div>
-                </aside>
+            <!-- Teams Grid/List -->
+            <div class="teams-container grid-view" id="teamsContainer">
+                <!-- Populated by JavaScript -->
+            </div>
+
+            <div class="loading" id="teamsLoading">
+                <div class="spinner"></div>
+                <p>Loading teams...</p>
             </div>
         </div>
     </main>
@@ -172,8 +154,8 @@
             </svg>
             <span>Home</span>
         </a>
-        <a href="teams.html" class="bottom-nav-item">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <a href="teams.html" class="bottom-nav-item active">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                 <circle cx="9" cy="7" r="4"></circle>
                 <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -204,6 +186,6 @@
         </a>
     </nav>
 
-    <script src="js/news.js" type="module"></script>
+    <script src="java-script/teams.js" type="module"></script>
 </body>
 </html>

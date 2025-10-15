@@ -1,0 +1,357 @@
+/* Teams Page Specific Styles - Uganda Footy Hub */
+
+.teams-page {
+    min-height: 100vh;
+    background: var(--bg-color);
+}
+
+/* Page Header */
+.page-hero {
+    background: white;
+    padding: 3rem 0 2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.page-hero h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.page-hero p {
+    color: #6b7280;
+    font-size: 1.1rem;
+}
+
+/* Filter Bar */
+.filter-bar {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 0 1rem;
+    justify-content: space-between;
+}
+
+.view-toggle {
+    display: flex;
+    gap: 0.5rem;
+    background: white;
+    padding: 0.25rem;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow);
+}
+
+.view-btn {
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.view-btn.active {
+    background: var(--primary-color);
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+.view-btn:hover:not(.active) {
+    background: var(--bg-color);
+}
+
+.sort-select {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--border-color);
+    background: white;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.sort-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.filter-chips {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.filter-chips::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-chip {
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    background: white;
+    border: 2px solid var(--border-color);
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.filter-chip.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.filter-chip:hover:not(.active) {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* Teams Container */
+.teams-container {
+    margin-top: 2rem;
+    min-height: 60vh;
+}
+
+/* Grid View */
+.teams-container.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.teams-container.grid-view .team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.teams-container.grid-view .team-logo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1.5rem;
+}
+
+/* List View */
+.teams-container.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.teams-container.list-view .team-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.teams-container.list-view .team-logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 1.5rem;
+    margin-bottom: 0;
+}
+
+/* Team Card Styles */
+.team-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.team-logo {
+    background: var(--bg-color);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.team-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 0.5rem;
+}
+
+.team-logo svg {
+    width: 50%;
+    height: 50%;
+    color: var(--primary-color);
+    opacity: 0.5;
+}
+
+.team-meta {
+    flex: 1;
+}
+
+.team-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.team-sub {
+    color: #6b7280;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.team-stats {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.team-stats .stat {
+    background: var(--bg-color);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* Loading State */
+.loading {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    color: #6b7280;
+}
+
+.loading.show {
+    display: flex;
+}
+
+.loading p {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Empty State */
+.teams-empty {
+    text-align: center;
+    color: #6b7280;
+    padding: 4rem 2rem;
+}
+
+.teams-empty svg {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    opacity: 0.5;
+}
+
+.teams-empty h3 {
+    color: var(--text-color);
+    margin-bottom: 0.75rem;
+}
+
+.teams-empty p {
+    font-size: 1.05rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .teams-container.grid-view {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+    
+    .view-toggle {
+        align-self: center;
+    }
+    
+    .filter-chips {
+        justify-content: center;
+        padding: 0 1rem;
+    }
+    
+    .teams-container.grid-view {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .teams-container.list-view .team-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .teams-container.list-view .team-logo {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .page-hero {
+        padding: 2rem 0 1.5rem;
+    }
+    
+    .page-hero h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .teams-container.grid-view {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-card {
+        padding: 1.5rem;
+    }
+    
+    .teams-container.grid-view .team-logo {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Focus States */
+.view-btn:focus,
+.filter-chip:focus,
+.sort-select:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.team-card:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
+}

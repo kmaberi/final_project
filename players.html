@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Player Profile — Football</title>
+  <meta name="description" content="Player profile page with responsive layout, stats, timeline and match history." />
+  <style>
+    :root{
+      --accent: #0b6cff;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --bg:#f5f7fb;
+      --radius:14px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%;margin:0;background:var(--bg);color:#0f172a}
+    .container{max-width:1100px;margin:28px auto;padding:20px}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:0 6px 20px rgba(12,20,40,0.06);padding:18px}
+
+    /* header */
+    .player-hero{display:grid;grid-template-columns: 180px 1fr;gap:18px;align-items:center}
+    .avatar{width:180px;height:180px;border-radius:12px;overflow:hidden;flex:0 0 180px}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .player-title h1{margin:0;font-size:1.6rem}
+    .player-title p{margin:6px 0;color:var(--muted)}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,var(--accent),#36a3ff);color:white;font-weight:600;font-size:0.85rem}
+
+    /* stats grid */
+    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px}
+    .stat{background:#f8fafc;padding:12px;border-radius:12px;text-align:center}
+    .stat strong{display:block;font-size:1.15rem}
+    .muted{color:var(--muted);font-size:0.9rem}
+
+    /* layout */
+    .main-grid{display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:18px}
+    .timeline{list-style:none;padding:0;margin:0}
+    .timeline li{padding:10px 0;border-bottom:1px dashed #e6e9ef}
+    .timeline time{display:block;color:var(--muted);font-size:0.85rem}
+
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:8px 10px;text-align:left;border-bottom:1px solid #eef2f7}
+    th{background:#fbfdff}
+
+    /* responsiveness */
+    @media (max-width:900px){
+      .player-hero{grid-template-columns:120px 1fr}
+      .avatar{width:120px;height:120px}
+      .stats-grid{grid-template-columns:repeat(2,1fr)}
+      .main-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:420px){
+      .stats-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+    }
+
+    /* small helpers */
+    .heading{font-weight:700;margin:0 0 8px 0}
+    .muted-block{color:var(--muted);font-size:0.95rem}
+
+    /* bottom nav helpers */
+    .bottom-nav a{display:flex;flex-direction:column;align-items:center;text-decoration:none;color:inherit;font-size:12px}
+    .bottom-nav svg{display:block;margin-bottom:4px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Player hero card -->
+    <section class="card player-hero" id="player-hero">
+      <div class="avatar" id="avatar-wrap">
+        <!-- prefer WebP but provide fallback -->
+        <picture>
+          <source srcset="images/players/placeholder.webp" type="image/webp">
+          <img src="images/players/placeholder.jpg" alt="Player photo" id="player-photo">
+        </picture>
+      </div>
+
+      <div class="player-title">
+        <div style="display:flex;align-items:center;gap:12px;justify-content:space-between">
+          <div>
+            <h1 id="player-name">Player Name</h1>
+            <p class="muted"><span id="player-position">Forward</span> • <span id="player-nationality">Uganda</span></p>
+            <div style="margin-top:10px">
+              <span class="badge" id="player-number">#9</span>
+            </div>
+          </div>
+          <div style="text-align:right">
+            <!-- small SVG indicator (scalable) -->
+            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <rect x="2" y="2" width="20" height="20" rx="6" stroke="#e6eefc" stroke-width="1.2"/>
+              <path d="M6 14s2-4 6-4 6 4 6 4" stroke="#0b6cff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- quick stats -->
+        <div class="stats-grid" aria-live="polite">
+          <div class="stat"><small class="muted">Appearances</small><strong id="stat-apps">0</strong></div>
+          <div class="stat"><small class="muted">Goals</small><strong id="stat-goals">0</strong></div>
+          <div class="stat"><small class="muted">Assists</small><strong id="stat-assists">0</strong></div>
+          <div class="stat"><small class="muted">Rating</small><strong id="stat-rating">0.0</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="main-grid">
+      <main>
+        <section class="card" aria-labelledby="bio-heading">
+          <h2 id="bio-heading" class="heading">Biography</h2>
+          <p id="player-bio" class="muted-block">Player biography will appear here. This section provides a short introduction about the player's background, playing style and career highlights.</p>
+        </section>
+
+        <section class="card" style="margin-top:14px" aria-labelledby="timeline-heading">
+          <h2 id="timeline-heading" class="heading">Career Timeline</h2>
+          <ul class="timeline" id="player-timeline">
+            <!-- JS will populate timeline items -->
+          </ul>
+        </section>
+
+        <section class="card" style="margin-top:14px" aria-labelledby="history-heading">
+          <h2 id="history-heading" class="heading">Recent Matches</h2>
+          <table aria-describedby="history-heading">
+            <thead>
+              <tr><th>Date</th><th>Opponent</th><th>Competition</th><th>Minutes</th><th>Rating</th></tr>
+            </thead>
+            <tbody id="match-history">
+              <!-- JS inserts rows -->
+            </tbody>
+          </table>
+        </section>
+      </main>
+
+      <aside>
+        <div class="card" aria-labelledby="contact-heading">
+          <h3 id="contact-heading" class="heading">Details</h3>
+          <p class="muted">Club: <strong id="player-club">N/A</strong></p>
+          <p class="muted">Height: <strong id="player-height">N/A</strong> • Weight: <strong id="player-weight">N/A</strong></p>
+          <p class="muted">DOB: <strong id="player-dob">N/A</strong></p>
+        </div>
+
+        <div class="card" style="margin-top:12px" aria-labelledby="media-heading">
+          <h3 id="media-heading" class="heading">Media</h3>
+          <p class="muted">Social: <a id="player-twitter" href="#">@player</a></p>
+          <p class="muted">Highlights: <a id="player-highlights" href="#">Watch</a></p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    function qs(name){
+      const url = new URL(location.href);
+      return url.searchParams.get(name);
+    }
+
+    // --- embedded data from your newsDatabase (trimmed for brevity) ---
+    // You already provided the JSON. To avoid duplicating huge blocks here, the page
+    // expects the server to set `window.newsDatabasePlayers` and `window.newsDatabaseEvents`.
+    // If those globals are missing, we fallback to a small sample below.
+
+    // safe fallback sample dataset
+    window.newsDatabasePlayers = window.newsDatabasePlayers || {
+      "9": {"id":9,"name":"Derrick Nsibambi","photo":"images/players/derrick-nsibambi.png","position":"Striker","jerseyNumber":9,"dateOfBirth":"1990-06-20","nationality":"Ugandan","currentTeam":"KCCA FC","teamId":1,"height":"183 cm","weight":"80 kg","biography":"Derrick Nsibambi is a powerful striker who has been one of the most consistent goal scorers in the Uganda Premier League.","careerStats":{"appearances":280,"goals":125,"assists":38},"achievements":["Uganda Premier League Top Scorer (2018)","Uganda Premier League Champion (2023)"],"careerHistory":[{"year":"2011-2014","team":"URA FC","league":"Uganda Premier League"},{"year":"2015-Present","team":"KCCA FC","league":"Uganda Premier League"}],"matches":[{"date":"2025-10-01","opponent":"Express FC","competition":"Premier League","minutes":90,"rating":7.6}],"timeline":[{"year":2015,"event":"Joined KCCA FC"}],"media":{"twitter":"https://twitter.com/example","highlights":"#"}}
+    };
+
+    const samplePlayer = window.newsDatabasePlayers['9'] || Object.values(window.newsDatabasePlayers)[0];
+
+    async function loadPlayer(id){
+      let data = null;
+      // 1) try window global
+      if(window.newsDatabasePlayers && window.newsDatabasePlayers[id]){
+        data = window.newsDatabasePlayers[id];
+      }
+
+      // 2) try fetching per-player JSON
+      if(!data){
+        try{
+          const resp = await fetch(`/api/players/${id}.json`, {cache:'no-store'});
+          if(resp.ok) data = await resp.json();
+        }catch(e){ /* ignore */ }
+      }
+
+      // 3) fallback
+      if(!data) data = samplePlayer;
+
+      renderPlayer(data);
+    }
+
+    function textOr(d,fallback='—'){ return d ?? fallback }
+
+    function renderPlayer(p){
+      document.getElementById('player-name').textContent = p.name || 'Player Name';
+      document.getElementById('player-position').textContent = p.position || '';
+      document.getElementById('player-nationality').textContent = p.nationality || '';
+      document.getElementById('player-number').textContent = '#'+(p.jerseyNumber ?? p.number ?? '');
+
+      document.getElementById('stat-apps').textContent = p.careerStats?.appearances ?? 0;
+      document.getElementById('stat-goals').textContent = p.careerStats?.goals ?? 0;
+      document.getElementById('stat-assists').textContent = p.careerStats?.assists ?? 0;
+      document.getElementById('stat-rating').textContent = (p.rating ?? 0).toFixed ? (p.rating ?? 0).toFixed(1) : (p.rating ?? 0);
+
+      document.getElementById('player-bio').textContent = p.biography || p.bio || '';
+      document.getElementById('player-club').textContent = p.currentTeam || p.club || '—';
+      document.getElementById('player-height').textContent = textOr(p.height || p.size);
+      document.getElementById('player-weight').textContent = textOr(p.weight);
+      document.getElementById('player-dob').textContent = textOr(p.dateOfBirth || p.dob);
+
+      // image
+      const img = document.getElementById('player-photo');
+      const picture = document.querySelector('#avatar-wrap picture');
+      if(p.photo){
+        // update picture source and img
+        if(picture){
+          const src = picture.querySelector('source'); if(src) src.srcset = p.photo.replace(/\.jpg|\.png$/,'') + '.webp';
+        }
+        img.src = p.photo;
+      }
+
+      // timeline
+      const tl = document.getElementById('player-timeline');
+      tl.innerHTML = '';
+      (p.timeline||p.careerHistory||[]).forEach(item=>{
+        const year = item.year || item.from || '';
+        const ev = item.event || item.team || item.title || '';
+        const li = document.createElement('li');
+        li.innerHTML = `<strong>${year}</strong><div>${ev}</div>`;
+        tl.appendChild(li);
+      });
+
+      // matches
+      const tbody = document.getElementById('match-history');
+      tbody.innerHTML = '';
+      (p.matches||[]).forEach(m=>{
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${m.date}</td><td>${m.opponent}</td><td>${m.competition}</td><td>${m.minutes}</td><td>${m.rating}</td>`;
+        tbody.appendChild(tr);
+      });
+
+      // media links
+      const tlink = document.getElementById('player-twitter');
+      tlink.href = p.media?.twitter || p.twitter || '#';
+      try{ tlink.textContent = p.media?.twitter ? new URL(p.media.twitter).hostname.replace('www.','') : (p.twitterHandle || '@player'); }catch(e){ tlink.textContent = '@player' }
+      const hlink = document.getElementById('player-highlights');
+      hlink.href = p.media?.highlights || p.highlights || '#';
+    }
+
+    // entry point
+    (function(){
+      const id = qs('id') || samplePlayer.id;
+      loadPlayer(id);
+    })();
+  </script>
+
+  <nav class="bottom-nav" style="position:fixed;bottom:0;left:0;width:100%;background:white;border-top:1px solid #e6e9ef;display:flex;justify-content:space-around;padding:10px 0;box-shadow:0 -2px 8px rgba(0,0,0,0.05);">
+    <a href="index.html" class="bottom-nav-item">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+      </svg>
+      <span>Home</span>
+    </a>
+    <a href="news.html" class="bottom-nav-item">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        <polyline points="17 8 12 3 7 8"></polyline>
+        <line x1="12" y1="3" x2="12" y2="15"></line>
+      </svg>
+      <span>News</span>
+    </a>
+    <a href="#" class="bottom-nav-item" id="searchBtn">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <span>Search</span>
+    </a>
+  </nav>
+</body>
+</html>

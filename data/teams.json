@@ -1,0 +1,282 @@
+{
+  "teams": [
+    {
+      "id": "kcca",
+      "name": "KCCA FC",
+      "fullName": "Kampala Capital City Authority Football Club",
+      "founded": 1963,
+      "stadium": "MTN Omondi Stadium",
+      "capacity": 15000,
+      "location": "Lugogo, Kampala",
+      "league": "Uganda Premier League",
+      "badge": "images/teams/kcca-badge.png",
+      "stadiumImage": "images/stadiums/mtn-omondi-stadium.jpg",
+      "description": "KCCA FC is one of Uganda's most successful football clubs, based in Kampala. Known for their attacking style of play and strong youth development program.",
+      "achievements": [
+        "Uganda Premier League Champions (2013, 2017, 2018)",
+        "Uganda Cup Winners (2017, 2018, 2019)",
+        "CECAFA Club Championship (2019)",
+        "CAF Champions League Quarter-finalists (2018)"
+      ],
+      "colors": {
+        "primary": "#FFD700",
+        "secondary": "#0066CC"
+      },
+      "founded": 1963,
+      "nickname": "The Kasasiro Boys",
+      "website": "www.kccafc.com",
+      "socialMedia": {
+        "twitter": "@kccafc",
+        "facebook": "KCCA FC",
+        "instagram": "@kccafc"
+      },
+      "currentSquad": 25,
+      "coach": "Morley Byekwaso",
+      "captains": ["Gift Ali", "Hassan Musana"],
+      "topScorers": ["Brian Aheebwa", "Julius Poloto"],
+      "rivalries": ["SC Villa", "Express FC"]
+    },
+    {
+      "id": "vipers",
+      "name": "Vipers SC",
+      "fullName": "Vipers Sports Club",
+      "founded": 2013,
+      "stadium": "St. Mary's Stadium Kitende",
+      "capacity": 25000,
+      "location": "Kitende, Wakiso",
+      "league": "Uganda Premier League",
+      "badge": "images/teams/vipers-badge.png",
+      "stadiumImage": "images/stadiums/st-marys-kitende.jpg",
+      "description": "Vipers SC is Uganda's most successful club in recent years, known for their modern facilities and professional approach to football.",
+      "achievements": [
+        "Uganda Premier League Champions (2020, 2021, 2022, 2023, 2024)",
+        "Uganda Cup Winners (2019, 2022, 2023)",
+        "CECAFA Club Championship (2021, 2023)",
+        "CAF Champions League participants"
+      ],
+      "colors": {
+        "primary": "#00FF00",
+        "secondary": "#000000"
+      },
+      "nickname": "The Venoms",
+      "website": "www.viperssc.com",
+      "socialMedia": {
+        "twitter": "@viperssc",
+        "facebook": "Vipers SC",
+        "instagram": "@viperssc"
+      },
+      "currentSquad": 28,
+      "coach": "Leonard Martins Neiva",
+      "captains": ["Milton Karisa", "Halid Lwaliwa"],
+      "topScorers": ["Yunus Sentamu", "Cesar Manzoki"],
+      "rivalries": ["KCCA FC", "URA FC"]
+    },
+    {
+      "id": "villa",
+      "name": "SC Villa",
+      "fullName": "Simba Club Villa",
+      "founded": 1975,
+      "stadium": "Wankulukuku Stadium",
+      "capacity": 10000,
+      "location": "Wankulukuku, Kampala",
+      "league": "Uganda Premier League",
+      "badge": "images/teams/villa-badge.png",
+      "stadiumImage": "images/stadiums/wankulukuku-stadium.jpg",
+      "description": "SC Villa is one of Uganda's most historic clubs with a rich tradition and passionate fanbase known as the Villa Faithful.",
+      "achievements": [
+        "Uganda Premier League Champions (16 titles)",
+        "Uganda Cup Winners (9 times)",
+        "CECAFA Club Championship (1981, 1989)",
+        "Most successful club in Ugandan football history"
+      ],
+      "colors": {
+        "primary": "#0066CC",
+        "secondary": "#FFFFFF"
+      },
+      "nickname": "The Jogoos",
+      "website": "www.scvilla.com",
+      "socialMedia": {
+        "twitter": "@scvilla",
+        "facebook": "SC Villa",
+        "instagram": "@scvilla"
+      },
+      "currentSquad": 22,
+      "coach": "Dusan Stojanovic",
+      "captains": ["Ronald Sekiganda", "Simon Peter Oketch"],
+      "topScorers": ["Douglas Bamweyana", "Nicholas Kabonge"],
+      "rivalries": ["Express FC", "KCCA FC"]
+    },
+    {
+      "id": "express",
+      "name": "Express FC",
+      "fullName": "Express Football Club",
+      "founded": 1957,
+      "stadium": "Wankulukuku Stadium",
+      "capacity": 10000,
+      "location": "Wankulukuku, Kampala",
+      "league": "Uganda Premier League",
+      "badge": "images/teams/express-badge.png",
+      "stadiumImage": "images/stadiums/wankulukuku-stadium.jpg",
+      "description": "Express FC is one of Uganda's oldest football clubs, known for developing young talent and their attacking philosophy.",
+      "achievements": [
+        "Uganda Premier League Champions (7 titles)",
+        "Uganda Cup Winners (5 times)",
+        "CECAFA Club Championship (1982)",
+        "CAF Champions League participants"
+      ],
+      "colors": {
+        "primary": "#FF0000",
+        "secondary": "#FFFFFF"
+      },
+      "nickname": "The Red Eagles",
+      "website": "www.expressfc.com",
+      "socialMedia": {
+        "twitter": "@expressfc",
+        "facebook": "Express FC",
+        "instagram": "@expressfc"
+      },
+      "currentSquad": 24,
+      "coach": "Wasswa Bbosa",
+      "captains": ["Mahad Yaya Kakooza", "Isa Lumu"],
+      "topScorers": ["George Senkaaba", "Eric Kenzo Kambale"],
+      "rivalries": ["SC Villa", "KCCA FC"]
+    },
+    {
+      "id": "ura",
+      "name": "URA FC",
+      "fullName": "Uganda Revenue Authority Football Club",
+      "founded": 1992,
+      "stadium": "Mandela National Stadium",
+      "capacity": 45000,
+      "location": "Namboole, Kampala",
+      "league": "Uganda Premier League",
+      "badge": "images/teams/ura-badge.png",
+      "stadiumImage": "images/stadiums/mandela-stadium.jpg",
+      "description": "URA FC represents the Uganda Revenue Authority and is known for their disciplined approach and strong defensive play.",
+      "achievements": [
+        "Uganda Premier League Champions (2015)",
+        "Uganda Cup Winners (2014, 2015)",
+        "CECAFA Club Championship runners-up (2016)",
+        "CAF Confederation Cup participants"
+      ],
+      "colors": {
+        "primary": "#FFD700",
+        "secondary": "#FF0000"
+      },
+      "nickname": "The Tax Collectors",
+      "website": "www.urafc.com",
+      "socialMedia": {
+        "twitter": "@urafc",
+        "facebook": "URA FC",
+        "instagram": "@urafc"
+      },
+      "currentSquad": 26,
+      "coach": "David Obua",
+      "captains": ["Shafik Kagimu", "Hudu Mulikyi"],
+      "topScorers": ["Steven Mukwala", "Cromwell Rwothomio"],
+      "rivalries": ["Vipers SC", "KCCA FC"]
+    },
+    {
+      "id": "updf",
+      "name": "UPDF FC",
+      "fullName": "Uganda People's Defence Forces Football Club",
+      "founded": 2007,
+      "stadium": "Bombo Military Barracks Stadium",
+      "capacity": 5000,
+      "location": "Bombo, Luweero",
+      "league": "Uganda Premier League",
+      "badge": "images/teams/updf-badge.png",
+      "stadiumImage": "images/stadiums/bombo-stadium.jpg",
+      "description": "UPDF FC is the football club of the Uganda People's Defence Forces, known for their discipline and team spirit.",
+      "achievements": [
+        "Uganda Cup Winners (2018)",
+        "CECAFA Club Championship participants (2019)",
+        "Uganda Premier League top 5 finishers"
+      ],
+      "colors": {
+        "primary": "#008000",
+        "secondary": "#FFD700"
+      },
+      "nickname": "The Soldiers",
+      "website": "www.updffc.com",
+      "socialMedia": {
+        "twitter": "@updffc",
+        "facebook": "UPDF FC",
+        "instagram": "@updffc"
+      },
+      "currentSquad": 23,
+      "coach": "Brian Ssenyondo",
+      "captains": ["Kizza Bukenya", "Joseph Akandwanaho"],
+      "topScorers": ["Brian Kalumba", "Ibrahim Kasinde"],
+      "rivalries": ["Police FC", "Proline FC"]
+    },
+    {
+      "id": "busoga",
+      "name": "Busoga United",
+      "fullName": "Busoga United Football Club",
+      "founded": 2018,
+      "stadium": "FUFA Technical Centre",
+      "capacity": 5000,
+      "location": "Njeru, Buikwe",
+      "league": "Uganda Premier League",
+      "badge": "images/teams/busoga-badge.png",
+      "stadiumImage": "images/stadiums/fufa-technical-centre.jpg",
+      "description": "Busoga United is one of the newer clubs in Ugandan football, representing the Busoga region with pride and determination.",
+      "achievements": [
+        "Promoted to Uganda Premier League (2019)",
+        "FUFA Big League Champions (2019)",
+        "Regional champions (Busoga)"
+      ],
+      "colors": {
+        "primary": "#0066FF",
+        "secondary": "#FFFFFF"
+      },
+      "nickname": "The Catfish",
+      "website": "www.busogaunited.com",
+      "socialMedia": {
+        "twitter": "@busogaunited",
+        "facebook": "Busoga United FC",
+        "instagram": "@busogaunited"
+      },
+      "currentSquad": 20,
+      "coach": "Abbey Bogere Kikomeko",
+      "captains": ["Paul Mucureezi", "Joseph Janjali"],
+      "topScorers": ["Anaku Sadat", "Nicholas Mwere"],
+      "rivalries": ["Kyetume FC", "Gadaffi FC"]
+    },
+    {
+      "id": "bul",
+      "name": "BUL FC",
+      "fullName": "Bidco United Limited Football Club",
+      "founded": 2018,
+      "stadium": "FUFA Technical Centre",
+      "capacity": 5000,
+      "location": "Njeru, Buikwe",
+      "league": "Uganda Premier League",
+      "badge": "images/teams/bul-badge.png",
+      "stadiumImage": "images/stadiums/fufa-technical-centre.jpg",
+      "description": "BUL FC is a modern football club backed by corporate sponsorship, focused on developing young talent and playing attractive football.",
+      "achievements": [
+        "Promoted to Uganda Premier League (2020)",
+        "FUFA Big League runners-up (2019)",
+        "Uganda Cup quarter-finalists (2021)"
+      ],
+      "colors": {
+        "primary": "#FF6600",
+        "secondary": "#000000"
+      },
+      "nickname": "The Eastern Giants",
+      "website": "www.bulfc.com",
+      "socialMedia": {
+        "twitter": "@bulfc",
+        "facebook": "BUL FC",
+        "instagram": "@bulfc"
+      },
+      "currentSquad": 21,
+      "coach": "Alex Isabirye",
+      "captains": ["Richard Wandyaka", "Alex Kitata"],
+      "topScorers": ["Douglas Bamweyana", "Peter Lwanga"],
+      "rivalries": ["Busoga United", "Kyetume FC"]
+    }
+  ]
+}

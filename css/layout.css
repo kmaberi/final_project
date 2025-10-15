@@ -184,6 +184,19 @@ main {
     padding-bottom: 80px; /* Space for bottom nav */
 }
 
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 2rem;
+    }
+}
+
 /* Desktop Layout */
 @media (min-width: 768px) {
     .mobile-header,
@@ -224,6 +237,31 @@ main {
     .desktop-header .logo-text {
         font-size: 1.25rem;
         color: white;
+    }
+    
+    .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-shrink: 0;
+    }
+    
+    .user-btn {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        transition: var(--transition);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .user-btn:hover {
+        background: rgba(255, 255, 255, 0.3);
+        border-color: rgba(255, 255, 255, 0.5);
     }
 
     .main-nav {
@@ -341,7 +379,8 @@ main {
     border-radius: 0.75rem;
     box-shadow: var(--shadow);
     height: fit-content;
-    sticky: top: 100px;
+    position: sticky;
+    top: 100px;
 }
 
 .timeline-content {

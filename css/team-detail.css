@@ -1,0 +1,573 @@
+/* Team Detail Page Specific Styles - Uganda Footy Hub */
+
+.team-detail-page {
+    min-height: 100vh;
+    background: var(--bg-color);
+}
+
+/* Team Header Section */
+.team-header {
+    position: relative;
+    background: linear-gradient(135deg, var(--primary-color), #004477);
+    color: white;
+    padding: 4rem 0;
+    margin-bottom: 3rem;
+    overflow: hidden;
+}
+
+.team-header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 1px, transparent 1px),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 100px 100px, 80px 80px;
+    opacity: 0.3;
+}
+
+.team-header-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.team-badge-large {
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    flex-shrink: 0;
+}
+
+.team-badge-large img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.team-badge-large svg {
+    width: 60px;
+    height: 60px;
+    color: white;
+    opacity: 0.8;
+}
+
+.team-header-info {
+    flex: 1;
+}
+
+.team-header-info h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.team-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.team-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.team-meta-item svg {
+    width: 16px;
+    height: 16px;
+}
+
+.team-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Team Stats Section */
+.team-stats-section {
+    padding: 3rem 0;
+    background: white;
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow);
+}
+
+/* Tabs Section */
+.team-tabs-section {
+    padding: 3rem 0;
+}
+
+.tabs-nav {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.tabs-nav::-webkit-scrollbar {
+    display: none;
+}
+
+.tab-btn {
+    padding: 0.875rem 1.5rem;
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 600;
+    white-space: nowrap;
+    color: var(--text-color);
+}
+
+.tab-btn.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.tab-btn:hover:not(.active) {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.tabs-content {
+    position: relative;
+}
+
+.tab-pane {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Content Cards */
+.content-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+.content-card h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+/* Achievements List */
+.achievements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--bg-color);
+    border-radius: 0.75rem;
+    border-left: 4px solid var(--accent-color);
+}
+
+.achievement-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.achievement-content h4 {
+    color: var(--text-color);
+    margin-bottom: 0.25rem;
+}
+
+.achievement-content p {
+    color: #6b7280;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Stadium Info */
+.stadium-info {
+    display: grid;
+    gap: 1rem;
+}
+
+.stadium-info p {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.stadium-info strong {
+    color: var(--primary-color);
+    min-width: 100px;
+    display: inline-block;
+}
+
+/* History Timeline */
+.history-timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.history-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--primary-color);
+}
+
+.timeline-event {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+}
+
+.timeline-event::before {
+    content: '';
+    position: absolute;
+    left: -2rem;
+    top: 0.5rem;
+    width: 12px;
+    height: 12px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    transform: translateX(-5px);
+}
+
+.timeline-event h4 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-event .event-date {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-event p {
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Players Grid */
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.player-card {
+    background: var(--bg-color);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    transition: var(--transition);
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.player-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-4px);
+}
+
+.player-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.player-avatar {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.player-info h4 {
+    color: var(--text-color);
+    margin-bottom: 0.25rem;
+}
+
+.player-info p {
+    color: #6b7280;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.player-stats {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.player-stat {
+    text-align: center;
+    flex: 1;
+}
+
+.player-stat .stat-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.player-stat .stat-label {
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+/* Comments Section */
+.comments-section {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.comment-form {
+    margin-bottom: 2rem;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 0.75rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    resize: vertical;
+    min-height: 100px;
+    margin-bottom: 1rem;
+}
+
+.comment-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.comment {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--bg-color);
+    border-radius: 0.75rem;
+}
+
+.comment-avatar {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.comment-content {
+    flex: 1;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.comment-author {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.comment-time {
+    font-size: 0.85rem;
+    color: #9ca3af;
+}
+
+.comment-text {
+    color: var(--text-color);
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+}
+
+.comment-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.comment-action {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6b7280;
+    font-size: 0.85rem;
+    transition: var(--transition);
+}
+
+.comment-action:hover {
+    color: var(--primary-color);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .team-header {
+        padding: 3rem 0;
+    }
+    
+    .team-header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .team-header-info h1 {
+        font-size: 2.25rem;
+    }
+    
+    .team-meta {
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .team-actions {
+        justify-content: center;
+    }
+    
+    .tabs-nav {
+        justify-content: center;
+    }
+    
+    .players-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .content-card {
+        padding: 1.5rem;
+    }
+    
+    .history-timeline {
+        padding-left: 1.5rem;
+    }
+    
+    .timeline-event {
+        padding-left: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-badge-large {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .team-badge-large img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .team-header-info h1 {
+        font-size: 2rem;
+    }
+    
+    .tab-btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Back Button Styles */
+.back-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: var(--text-color);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.share-btn {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.share-btn:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}

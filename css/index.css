@@ -1,0 +1,151 @@
+/* Index Page Specific Styles - Uganda Footy Hub */
+
+/* Hero Section Enhancements */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 1px, transparent 1px),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 100px 100px, 80px 80px;
+    opacity: 0.3;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+/* Stats Section */
+.stats-section {
+    padding: 4rem 0;
+    background: white;
+}
+
+.stats-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Timeline Preview */
+.timeline-preview {
+    padding: 4rem 0;
+    background: var(--bg-color);
+}
+
+.timeline-preview h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+
+.timeline-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Featured Section */
+.featured-section {
+    padding: 4rem 0;
+    background: white;
+}
+
+.featured-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+
+.featured-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Loading States */
+.loading {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    color: #6b7280;
+}
+
+.loading.show {
+    display: flex;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--border-color);
+    border-top: 3px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .stats-section,
+    .timeline-preview,
+    .featured-section {
+        padding: 3rem 0;
+    }
+    
+    .stats-section .container,
+    .featured-section .container {
+        padding: 0 1rem;
+    }
+    
+    .timeline-preview h2,
+    .featured-section h2 {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+    
+    .timeline-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* Utility Classes */
+.btn-block {
+    width: 100%;
+}
+
+.btn-group {
+    display: flex;
+    gap: 1rem;
+}
+
+@media (max-width: 640px) {
+    .btn-group {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,472 @@
+{
+  "players": [
+    {
+      "id": 1,
+      "name": "Denis Onyango",
+      "photo": "images/players/denis-onyango.jpg",
+      "position": "Goalkeeper",
+      "jerseyNumber": 1,
+      "dateOfBirth": "1985-05-15",
+      "nationality": "Ugandan",
+      "currentTeam": "Retired (Former Mamelodi Sundowns)",
+      "teamId": null,
+      "height": "188 cm",
+      "weight": "85 kg",
+      "biography": "Denis Onyango is widely regarded as one of Africa's greatest goalkeepers. He had an illustrious career with Mamelodi Sundowns in South Africa and the Uganda Cranes, winning multiple CAF Champions League titles and being named African Goalkeeper of the Year.",
+      "careerStats": {
+        "appearances": 450,
+        "cleanSheets": 180,
+        "goalsAgainst": 420,
+        "saves": 1250
+      },
+      "achievements": [
+        "CAF Champions League Winner (2016)",
+        "African Goalkeeper of the Year (2016)",
+        "5x South African Premier League Champion",
+        "Uganda Cranes Captain"
+      ],
+      "careerHistory": [
+        {
+          "year": "2006-2011",
+          "team": "SC Villa",
+          "league": "Uganda Premier League"
+        },
+        {
+          "year": "2011-2022",
+          "team": "Mamelodi Sundowns",
+          "league": "South African Premier League"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Emmanuel Okwi",
+      "photo": "images/players/emmanuel-okwi.jpg",
+      "position": "Forward",
+      "jerseyNumber": 11,
+      "dateOfBirth": "1992-08-21",
+      "nationality": "Ugandan",
+      "currentTeam": "Al Adalah SC",
+      "teamId": null,
+      "height": "175 cm",
+      "weight": "72 kg",
+      "biography": "Emmanuel Okwi is one of Uganda's most prolific strikers, known for his pace and finishing ability. He has played in various leagues including Tanzania, Egypt, and Saudi Arabia, representing Uganda Cranes with distinction.",
+      "careerStats": {
+        "appearances": 320,
+        "goals": 145,
+        "assists": 68,
+        "yellowCards": 25
+      },
+      "achievements": [
+        "Tanzania Premier League Top Scorer (2016)",
+        "Uganda Cranes All-time Top 10 Scorer",
+        "CECAFA Cup Winner (2019)"
+      ],
+      "careerHistory": [
+        {
+          "year": "2012-2015",
+          "team": "Simba SC",
+          "league": "Tanzania Premier League"
+        },
+        {
+          "year": "2018-2020",
+          "team": "Al Masry",
+          "league": "Egyptian Premier League"
+        },
+        {
+          "year": "2021-Present",
+          "team": "Al Adalah SC",
+          "league": "Saudi Arabia Division 1"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Farouk Miya",
+      "photo": "images/players/farouk-miya.jpg",
+      "position": "Midfielder",
+      "jerseyNumber": 10,
+      "dateOfBirth": "1997-05-09",
+      "nationality": "Ugandan",
+      "currentTeam": "Karagumruk",
+      "teamId": null,
+      "height": "170 cm",
+      "weight": "68 kg",
+      "biography": "Farouk Miya is a creative midfielder who has represented Uganda at the highest level. Known for his dribbling skills and vision, he has played in Belgium and Turkey, becoming one of Uganda's most prominent exports.",
+      "careerStats": {
+        "appearances": 280,
+        "goals": 52,
+        "assists": 85,
+        "yellowCards": 18
+      },
+      "achievements": [
+        "Belgian Pro League Runner-up (2018)",
+        "Uganda Cranes Player of the Year (2017)",
+        "AFCON Round of 16 (2019)"
+      ],
+      "careerHistory": [
+        {
+          "year": "2013-2015",
+          "team": "Vipers SC",
+          "league": "Uganda Premier League"
+        },
+        {
+          "year": "2015-2021",
+          "team": "Standard Liège",
+          "league": "Belgian Pro League"
+        },
+        {
+          "year": "2021-Present",
+          "team": "Karagumruk",
+          "league": "Turkish Super League"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Geoffrey Massa",
+      "photo": "images/players/geoffrey-massa.jpg",
+      "position": "Midfielder",
+      "jerseyNumber": 7,
+      "dateOfBirth": "1988-01-04",
+      "nationality": "Ugandan",
+      "currentTeam": "Retired",
+      "teamId": null,
+      "height": "178 cm",
+      "weight": "74 kg",
+      "biography": "Geoffrey Massa was a versatile midfielder who represented Uganda with great distinction. He had successful stints in South Africa and was a key player for the Uganda Cranes during multiple AFCON campaigns.",
+      "careerStats": {
+        "appearances": 380,
+        "goals": 75,
+        "assists": 92,
+        "yellowCards": 32
+      },
+      "achievements": [
+        "South African Premier League Champion",
+        "Uganda Cranes Legend",
+        "200+ International Appearances"
+      ],
+      "careerHistory": [
+        {
+          "year": "2006-2010",
+          "team": "SC Villa",
+          "league": "Uganda Premier League"
+        },
+        {
+          "year": "2010-2019",
+          "team": "Mamelodi Sundowns",
+          "league": "South African Premier League"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Khalid Aucho",
+      "photo": "images/players/khalid-aucho.jpg",
+      "position": "Defensive Midfielder",
+      "jerseyNumber": 8,
+      "dateOfBirth": "1991-09-18",
+      "nationality": "Ugandan",
+      "currentTeam": "Young Africans SC",
+      "teamId": null,
+      "height": "180 cm",
+      "weight": "76 kg",
+      "biography": "Khalid Aucho is a commanding defensive midfielder known for his tackling and distribution. He has been a mainstay in the Uganda Cranes midfield and has played in South Africa and Tanzania.",
+      "careerStats": {
+        "appearances": 350,
+        "goals": 28,
+        "assists": 45,
+        "yellowCards": 55,
+        "redCards": 3
+      },
+      "achievements": [
+        "Tanzania Premier League Champion (2022)",
+        "Uganda Cranes Captain",
+        "100+ International Caps"
+      ],
+      "careerHistory": [
+        {
+          "year": "2010-2012",
+          "team": "Vipers SC",
+          "league": "Uganda Premier League"
+        },
+        {
+          "year": "2012-2018",
+          "team": "Baroka FC",
+          "league": "South African Premier League"
+        },
+        {
+          "year": "2020-Present",
+          "team": "Young Africans SC",
+          "league": "Tanzania Premier League"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Brian Umony",
+      "photo": "images/players/brian-umony.jpg",
+      "position": "Midfielder",
+      "jerseyNumber": 14,
+      "dateOfBirth": "1996-03-12",
+      "nationality": "Ugandan",
+      "currentTeam": "KCCA FC",
+      "teamId": 1,
+      "height": "176 cm",
+      "weight": "70 kg",
+      "biography": "Brian Umony is an attacking midfielder who has been instrumental in KCCA FC's recent successes. Known for his creativity and goal-scoring ability from midfield, he is considered one of Uganda's brightest talents.",
+      "careerStats": {
+        "appearances": 180,
+        "goals": 42,
+        "assists": 55,
+        "yellowCards": 12
+      },
+      "achievements": [
+        "Uganda Premier League Champion (2023)",
+        "Uganda Cup Winner (2022)",
+        "Uganda Premier League Player of the Year Nominee (2022)"
+      ],
+      "careerHistory": [
+        {
+          "year": "2015-2017",
+          "team": "Vipers SC",
+          "league": "Uganda Premier League"
+        },
+        {
+          "year": "2018-Present",
+          "team": "KCCA FC",
+          "league": "Uganda Premier League"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Milton Karisa",
+      "photo": "images/players/milton-karisa.jpg",
+      "position": "Winger",
+      "jerseyNumber": 17,
+      "dateOfBirth": "1995-11-08",
+      "nationality": "Ugandan",
+      "currentTeam": "Vipers SC",
+      "teamId": 2,
+      "height": "172 cm",
+      "weight": "68 kg",
+      "biography": "Milton Karisa is a pacy winger known for his dribbling and ability to create chances. He has been a key player for Vipers SC and the Uganda Cranes, with several impressive performances in continental competitions.",
+      "careerStats": {
+        "appearances": 220,
+        "goals": 58,
+        "assists": 72,
+        "yellowCards": 15
+      },
+      "achievements": [
+        "Uganda Premier League Champion (2022)",
+        "Uganda Cup Winner (2022)",
+        "CAF Champions League Participant"
+      ],
+      "careerHistory": [
+        {
+          "year": "2014-2016",
+          "team": "Onduparaka FC",
+          "league": "Uganda Premier League"
+        },
+        {
+          "year": "2017-Present",
+          "team": "Vipers SC",
+          "league": "Uganda Premier League"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Derrick Nsibambi",
+      "photo": "images/players/derrick-nsibambi.png",
+      "position": "Striker",
+      "jerseyNumber": 9,
+      "dateOfBirth": "1990-06-20",
+      "nationality": "Ugandan",
+      "currentTeam": "KCCA FC",
+      "teamId": 1,
+      "height": "183 cm",
+      "weight": "80 kg",
+      "biography": "Derrick Nsibambi is a powerful striker who has been one of the most consistent goal scorers in the Uganda Premier League. His physical presence and finishing ability make him a constant threat.",
+      "careerStats": {
+        "appearances": 280,
+        "goals": 125,
+        "assists": 38,
+        "yellowCards": 22
+      },
+      "achievements": [
+        "Uganda Premier League Top Scorer (2018)",
+        "Uganda Premier League Champion (2023)",
+        "150+ Career Goals"
+      ],
+      "careerHistory": [
+        {
+          "year": "2011-2014",
+          "team": "URA FC",
+          "league": "Uganda Premier League"
+        },
+        {
+          "year": "2015-Present",
+          "team": "KCCA FC",
+          "league": "Uganda Premier League"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Murushid Juuko",
+      "photo": "images/players/murushid-juuko.jpg",
+      "position": "Defender",
+      "jerseyNumber": 5,
+      "dateOfBirth": "1989-02-28",
+      "nationality": "Ugandan",
+      "currentTeam": "Express FC",
+      "teamId": 4,
+      "height": "185 cm",
+      "weight": "78 kg",
+      "biography": "Murushid Juuko is an experienced central defender who has been a pillar of the Uganda Cranes defense. He has played in South Africa and is known for his leadership and defensive prowess.",
+      "careerStats": {
+        "appearances": 320,
+        "goals": 18,
+        "assists": 12,
+        "yellowCards": 45,
+        "redCards": 4
+      },
+      "achievements": [
+        "Uganda Cranes Captain",
+        "100+ International Caps",
+        "AFCON Participant (2019)"
+      ],
+      "careerHistory": [
+        {
+          "year": "2009-2012",
+          "team": "KCCA FC",
+          "league": "Uganda Premier League"
+        },
+        {
+          "year": "2012-2019",
+          "team": "Simba SC",
+          "league": "Tanzania Premier League"
+        },
+        {
+          "year": "2020-Present",
+          "team": "Express FC",
+          "league": "Uganda Premier League"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Patrick Kaddu",
+      "photo": "images/players/patrick-kaddu.jpg",
+      "position": "Striker",
+      "jerseyNumber": 19,
+      "dateOfBirth": "1994-07-15",
+      "nationality": "Ugandan",
+      "currentTeam": "Vipers SC",
+      "teamId": 2,
+      "height": "178 cm",
+      "weight": "75 kg",
+      "biography": "Patrick Kaddu is a clinical finisher who has been among the top scorers in the Uganda Premier League. His goal-scoring record for Vipers SC has made him a fan favorite and Uganda Cranes regular.",
+      "careerStats": {
+        "appearances": 200,
+        "goals": 95,
+        "assists": 32,
+        "yellowCards": 18
+      },
+      "achievements": [
+        "Uganda Premier League Top Scorer (2020)",
+        "Uganda Premier League Champion (2022)",
+        "80+ League Goals"
+      ],
+      "careerHistory": [
+        {
+          "year": "2014-2016",
+          "team": "KCCA FC",
+          "league": "Uganda Premier League"
+        },
+        {
+          "year": "2017-Present",
+          "team": "Vipers SC",
+          "league": "Uganda Premier League"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Bevis Mugabi",
+      "photo": "images/players/bevis-mugabi.jpg",
+      "position": "Defender",
+      "jerseyNumber": 4,
+      "dateOfBirth": "1995-01-16",
+      "nationality": "Ugandan",
+      "currentTeam": "Motherwell FC",
+      "teamId": null,
+      "height": "190 cm",
+      "weight": "82 kg",
+      "biography": "Bevis Mugabi is a tall and powerful defender playing in the Scottish Premiership. He represents Uganda Cranes and is known for his aerial dominance and defensive solidity.",
+      "careerStats": {
+        "appearances": 180,
+        "goals": 12,
+        "assists": 5,
+        "yellowCards": 28,
+        "redCards": 2
+      },
+      "achievements": [
+        "Scottish Premiership Player",
+        "Uganda Cranes Regular",
+        "AFCON Participant (2019)"
+      ],
+      "careerHistory": [
+        {
+          "year": "2013-2015",
+          "team": "Express FC",
+          "league": "Uganda Premier League"
+        },
+        {
+          "year": "2019-Present",
+          "team": "Motherwell FC",
+          "league": "Scottish Premiership"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Allan Okello",
+      "photo": "images/players/allan-okello.jpg",
+      "position": "Attacking Midfielder",
+      "jerseyNumber": 20,
+      "dateOfBirth": "2000-08-26",
+      "nationality": "Ugandan",
+      "currentTeam": "Vipers SC",
+      "teamId": 2,
+      "height": "170 cm",
+      "weight": "65 kg",
+      "biography": "Allan Okello is considered one of Uganda's brightest young talents. A technically gifted playmaker, he burst onto the scene as a teenager and has been impressing with his vision and passing ability.",
+      "careerStats": {
+        "appearances": 150,
+        "goals": 35,
+        "assists": 58,
+        "yellowCards": 8
+      },
+      "achievements": [
+        "Uganda Premier League Young Player of the Year (2018)",
+        "Uganda Premier League Champion (2022)",
+        "Uganda Cranes Youngest Debutant"
+      ],
+      "careerHistory": [
+        {
+          "year": "2017-2021",
+          "team": "KCCA FC",
+          "league": "Uganda Premier League"
+        },
+        {
+          "year": "2022-Present",
+          "team": "Vipers SC",
+          "league": "Uganda Premier League"
+        }
+      ]
+    }
+  ]
+}
