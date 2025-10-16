@@ -4,9 +4,11 @@
 const API_CONFIG = {
     SPORTSDB_KEY: 'YOUR_SPORTSDB_API_KEY_HERE', // Get from https://www.thesportsdb.com/api.php
     NEWS_API_KEY: 'YOUR_NEWS_API_KEY_HERE', // Get from https://newsapi.org/
+    WEATHER_API_KEY: 'YOUR_WEATHER_API_KEY_HERE', // Get from https://openweathermap.org/api
     SPORTSDB_URL: 'https://www.thesportsdb.com/api/v1/json',
     NEWS_API_URL: 'https://newsapi.org/v2',
-    WIKIPEDIA_URL: 'https://en.wikipedia.org/w/api.php'
+    WIKIPEDIA_URL: 'https://en.wikipedia.org/w/api.php',
+    WEATHER_API_URL: 'https://api.openweathermap.org/data/2.5'
 };
 
 // Cache for API responses
@@ -43,7 +45,7 @@ export async function loadEvents() {
     }
 }
 
-// Load Teams from TheSportsDB
+// Load Teams from local JSON first, then API as fallback
 export async function loadTeams() {
     // Check cache
     if (cache.teams && Date.now() - cache.timestamp.teams < CACHE_DURATION) {
@@ -51,23 +53,37 @@ export async function loadTeams() {
     }
 
     try {
-        // Using TheSportsDB API - search for Ugandan teams
-        const url = `${API_CONFIG.SPORTSDB_URL}/${API_CONFIG.SPORTSDB_KEY}/search_all_teams.php?c=Uganda`;
+        // First try loading from local JSON
+        const response = await fetch('./data/teams.json');
+        if (response.ok) {
+            const data = await response.json();
+            cache.teams = data.teams || [];
+            cache.timestamp.teams = Date.now();
+            return cache.teams;
+        }
+    } catch (error) {
+        console.log('Local teams.json not available, trying API...');
+    }
+
+    try {
+        // Fallback to TheSportsDB API
+        const url = `${API_CONFIG.SPORTSDB_URL}/1/search_all_teams.php?c=Uganda`;
         const response = await fetch(url);
         
-        if (!response.ok) {
-            throw new Error('Failed to load teams from API');
+        if (response.ok) {
+            const data = await response.json();
+            cache.teams = data.teams || getSampleTeams();
+            cache.timestamp.teams = Date.now();
+            return cache.teams;
         }
-        
-        const data = await response.json();
-        cache.teams = data.teams || getSampleTeams();
-        cache.timestamp.teams = Date.now();
-        return cache.teams;
     } catch (error) {
-        console.error('Error loading teams:', error);
-        // Return sample data if API fails
-        return getSampleTeams();
+        console.log('API unavailable, using sample data');
     }
+
+    // Final fallback to sample data
+    cache.teams = getSampleTeams();
+    cache.timestamp.teams = Date.now();
+    return cache.teams;
 }
 
 // Load Featured Teams
@@ -285,6 +301,79 @@ function getSampleNews() {
             publishedAt: new Date(Date.now() - 172800000).toISOString(),
             source: { name: 'FUFA Media' }
         }
+    ];
+}
+
+// Get Weather Data for Kampala (Uganda's capital)
+export async function getWeatherData(city = 'Kampala,UG') {
+    try {
+        const url = `${API_CONFIG.WEATHER_API_URL}/weather?q=${city}&units=metric&appid=${API_CONFIG.WEATHER_API_KEY}`;
+        const response = await fetch(url);
+        
+        if (!response.ok) {
+            throw new Error('Weather data not available');
+        }
+        
+        const data = await response.json();
+        return {
+            temperature: Math.round(data.main.temp),
+            description: data.weather[0].description,
+            icon: data.weather[0].icon,
+            humidity: data.main.humidity,
+            windSpeed: data.wind.speed,
+            city: data.name,
+            country: data.sys.country
+        };
+    } catch (error) {
+        console.error('Error fetching weather data:', error);
+        // Return sample weather data as fallback
+        return getSampleWeatherData();
+    }
+}
+
+// Get weather forecast
+export async function getWeatherForecast(city = 'Kampala,UG') {
+    try {
+        const url = `${API_CONFIG.WEATHER_API_URL}/forecast?q=${city}&units=metric&cnt=5&appid=${API_CONFIG.WEATHER_API_KEY}`;
+        const response = await fetch(url);
+        
+        if (!response.ok) {
+            throw new Error('Weather forecast not available');
+        }
+        
+        const data = await response.json();
+        return data.list.map(item => ({
+            time: new Date(item.dt * 1000).getHours() + ':00',
+            temperature: Math.round(item.main.temp),
+            description: item.weather[0].description,
+            icon: item.weather[0].icon
+        }));
+    } catch (error) {
+        console.error('Error fetching weather forecast:', error);
+        return getSampleWeatherForecast();
+    }
+}
+
+// Sample weather data
+function getSampleWeatherData() {
+    return {
+        temperature: 26,
+        description: 'partly cloudy',
+        icon: '02d',
+        humidity: 65,
+        windSpeed: 3.2,
+        city: 'Kampala',
+        country: 'UG'
+    };
+}
+
+function getSampleWeatherForecast() {
+    return [
+        { time: '12:00', temperature: 28, description: 'sunny', icon: '01d' },
+        { time: '15:00', temperature: 30, description: 'partly cloudy', icon: '02d' },
+        { time: '18:00', temperature: 27, description: 'cloudy', icon: '03d' },
+        { time: '21:00', temperature: 24, description: 'partly cloudy', icon: '02n' },
+        { time: '00:00', temperature: 22, description: 'clear', icon: '01n' }
     ];
 }
 

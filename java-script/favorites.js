@@ -1,5 +1,5 @@
 // Favorites System - Uganda Footy Hub
-// Uses in-memory storage instead of localStorage
+// Uses localStorage with fallback to in-memory storage
 
 let favoritesData = {
     teams: [],
@@ -7,8 +7,37 @@ let favoritesData = {
     events: []
 };
 
+// Load favorites from localStorage
+function loadFavoritesFromStorage() {
+    try {
+        const stored = localStorage.getItem('ugandaFootyFavorites');
+        if (stored) {
+            const parsed = JSON.parse(stored);
+            favoritesData = {
+                teams: parsed.teams || [],
+                players: parsed.players || [],
+                events: parsed.events || []
+            };
+        }
+    } catch (error) {
+        console.log('Could not load favorites from localStorage:', error);
+    }
+}
+
+// Save favorites to localStorage
+function saveFavoritesToStorage() {
+    try {
+        localStorage.setItem('ugandaFootyFavorites', JSON.stringify(favoritesData));
+    } catch (error) {
+        console.log('Could not save favorites to localStorage:', error);
+    }
+}
+
 // Initialize Favorites
 export function initFavorites() {
+    // Load favorites from localStorage
+    loadFavoritesFromStorage();
+    
     // Setup favorites button
     const favoritesBtn = document.getElementById('favoritesBtn');
     if (favoritesBtn) {
@@ -43,6 +72,7 @@ export function addToFavorites(type, item) {
         addedAt: new Date().toISOString()
     });
     
+    saveFavoritesToStorage();
     updateFavoritesBadge();
     showNotification(`Added to favorites!`);
     return true;
@@ -62,6 +92,7 @@ export function removeFromFavorites(type, itemId) {
     }
     
     favoritesData[type].splice(index, 1);
+    saveFavoritesToStorage();
     updateFavoritesBadge();
     showNotification(`Removed from favorites`);
     return true;

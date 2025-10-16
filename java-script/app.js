@@ -1,5 +1,5 @@
 // Main Application - Uganda Footy Hub
-import { loadEvents, loadFeaturedTeams } from './api.js';
+import { loadEvents, loadFeaturedTeams, getWeatherData } from './api.js';
 import { initSearch } from './search.js';
 import { initFavorites } from './favorites.js';
 
@@ -57,6 +57,7 @@ function initNavigation() {
 async function loadHomeContent() {
     await loadRecentEvents();
     await loadFeaturedTeamsSection();
+    await loadWeatherWidget();
 }
 
 // Load Recent Events
@@ -140,5 +141,103 @@ function createTimelineCard(event) {
                         <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
                         <line x1="3" y1="9" x2="21" y2="9"/>
                         <line x1="9" y1="21" x2="9" y2="9"/>
-                    </svg>`} 
+                    </svg>`}
+            </div>
+            <div class="timeline-content">
+                <h3 class="timeline-title">${event.title}</h3>
+                <p class="timeline-description">${event.description}</p>
+                ${event.team ? `<span class="timeline-team">${event.team}</span>` : ''}
+            </div>
+        </div>
+    `;
+}
+
+// Create Team Card
+function createTeamCard(team) {
+    return `
+        <div class="team-card" data-id="${team.id}">
+            <div class="team-badge">
+                ${team.badge 
+                    ? `<img src="${team.badge}" alt="${team.name}" loading="lazy">` 
+                    : `<svg class="team-badge-placeholder" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                    </svg>`}
+            </div>
+            <h3 class="team-name">${team.name}</h3>
+            <p class="team-stadium">${team.stadium || 'Stadium TBA'}</p>
+            <p class="team-founded">Founded: ${team.founded || 'Unknown'}</p>
+        </div>
+    `;
+}
+
+// Show Event Detail
+function showEventDetail(event) {
+    // Simple modal implementation
+    const message = `${event.title} (${event.year})\n\n${event.description}\n\nTeam: ${event.team || 'N/A'}\nType: ${event.type || 'Event'}`;
+    alert(message);
+    // TODO: Replace with proper modal component
+}
+
+// Load Weather Widget
+async function loadWeatherWidget() {
+    const container = document.getElementById('weatherWidget');
+    if (!container) return;
+    
+    try {
+        container.innerHTML = '<div class="weather-loading">☁️ Loading weather...</div>';
+        
+        const weather = await getWeatherData();
+        
+        container.innerHTML = `
+            <div class="weather-widget">
+                <div class="weather-header">
+                    <h3>🌤️ Weather in ${weather.city}</h3>
+                    <small>Current conditions</small>
+                </div>
+                <div class="weather-main">
+                    <div class="weather-temp">
+                        <span class="temp-value">${weather.temperature}°</span>
+                        <span class="temp-unit">C</span>
+                    </div>
+                    <div class="weather-details">
+                        <div class="weather-desc">${weather.description}</div>
+                        <div class="weather-meta">
+                            <span>💧 ${weather.humidity}%</span>
+                            <span>💨 ${weather.windSpeed} m/s</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-footer">
+                    <small>Perfect weather for football! ⚽</small>
+                </div>
+            </div>
+        `;
+        
+    } catch (error) {
+        console.error('Error loading weather widget:', error);
+        container.innerHTML = `
+            <div class="weather-widget weather-error">
+                <div class="weather-header">
+                    <h3>🌤️ Weather in Kampala</h3>
+                </div>
+                <div class="weather-main">
+                    <div class="weather-temp">
+                        <span class="temp-value">26°</span>
+                        <span class="temp-unit">C</span>
+                    </div>
+                    <div class="weather-details">
+                        <div class="weather-desc">Partly cloudy</div>
+                        <div class="weather-meta">
+                            <span>💧 65%</span>
+                            <span>💨 3.2 m/s</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-footer">
+                    <small>Great day for football! ⚽</small>
+                </div>
+            </div>
+        `;
+    }
 }

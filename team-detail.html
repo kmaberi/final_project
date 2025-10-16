@@ -230,10 +230,18 @@
                         <div class="content-card">
                             <h3>Fan Comments</h3>
                             <div class="comments-section">
-                                <div class="comment-form">
-                                    <textarea id="commentText" placeholder="Share your thoughts about this team..." rows="3"></textarea>
-                                    <button class="btn btn-primary" id="submitComment">Post Comment</button>
-                                </div>
+                                <form class="comment-form" id="commentForm">
+                                    <div class="comment-form-header">
+                                        <input type="text" id="commentAuthorName" placeholder="Your name (optional)" maxlength="50">
+                                    </div>
+                                    <div class="comment-form-body">
+                                        <textarea id="commentText" placeholder="Share your thoughts about this team..." rows="3" maxlength="500" required></textarea>
+                                        <div class="comment-form-footer">
+                                            <small class="character-count">0/500 characters</small>
+                                            <button type="submit" class="btn btn-primary" id="submitComment">Post Comment</button>
+                                        </div>
+                                    </div>
+                                </form>
                                 <div class="comments-list" id="commentsList">
                                     <!-- Populated by JS -->
                                 </div>

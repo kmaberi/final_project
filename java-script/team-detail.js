@@ -1,4 +1,5 @@
 // Team Detail Page - Uganda Footy Hub
+import { initComments } from './comments.js';
 import { loadTeams } from './api.js';
 import { initSearch } from './search.js';
 import { initFavorites, createFavoriteButton, isInFavorites } from './favorites.js';
@@ -13,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initFavorites();
     loadTeamData();
     initTabs();
-    initComments();
 });
 
 // Navigation
@@ -54,6 +54,9 @@ async function loadTeamData() {
         displayPlayers();
         setupFavoriteButton();
         setupShareButton();
+        
+        // Initialize comments for this team
+        initComments(currentTeam.id, 'team');
 
     } catch (error) {
         console.error('Error loading team:', error);
