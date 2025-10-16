@@ -10,7 +10,7 @@
       "location": "Lugogo, Kampala",
       "league": "Uganda Premier League",
       "badge": "images/teams/kcca-badge.png",
-      "stadiumImage": "images/stadiums/mtn-omondi-stadium.jpg",
+      "stadiumImage": "images/stadiums/kcca-omondi-stadium.jpg",
       "description": "KCCA FC is one of Uganda's most successful football clubs, based in Kampala. Known for their attacking style of play and strong youth development program.",
       "achievements": [
         "Uganda Premier League Champions (2013, 2017, 2018)",
@@ -46,7 +46,7 @@
       "location": "Kitende, Wakiso",
       "league": "Uganda Premier League",
       "badge": "images/teams/vipers-badge.png",
-      "stadiumImage": "images/stadiums/st-marys-kitende.jpg",
+      "stadiumImage": "images/stadiums/st.mary's-stadium.jpg",
       "description": "Vipers SC is Uganda's most successful club in recent years, known for their modern facilities and professional approach to football.",
       "achievements": [
         "Uganda Premier League Champions (2020, 2021, 2022, 2023, 2024)",
@@ -81,7 +81,7 @@
       "location": "Wankulukuku, Kampala",
       "league": "Uganda Premier League",
       "badge": "images/teams/villa-badge.png",
-      "stadiumImage": "images/stadiums/wankulukuku-stadium.jpg",
+      "stadiumImage": "images/stadiums/nakivubo-stadium.jpg",
       "description": "SC Villa is one of Uganda's most historic clubs with a rich tradition and passionate fanbase known as the Villa Faithful.",
       "achievements": [
         "Uganda Premier League Champions (16 titles)",
@@ -116,7 +116,7 @@
       "location": "Wankulukuku, Kampala",
       "league": "Uganda Premier League",
       "badge": "images/teams/express-badge.png",
-      "stadiumImage": "images/stadiums/wankulukuku-stadium.jpg",
+      "stadiumImage": "images/stadiums/nakivubo-stadium.jpg",
       "description": "Express FC is one of Uganda's oldest football clubs, known for developing young talent and their attacking philosophy.",
       "achievements": [
         "Uganda Premier League Champions (7 titles)",
@@ -151,7 +151,7 @@
       "location": "Namboole, Kampala",
       "league": "Uganda Premier League",
       "badge": "images/teams/ura-badge.png",
-      "stadiumImage": "images/stadiums/mandela-stadium.jpg",
+      "stadiumImage": "images/stadiums/mandela-national-stadium.jpg",
       "description": "URA FC represents the Uganda Revenue Authority and is known for their disciplined approach and strong defensive play.",
       "achievements": [
         "Uganda Premier League Champions (2015)",
@@ -186,7 +186,7 @@
       "location": "Bombo, Luweero",
       "league": "Uganda Premier League",
       "badge": "images/teams/updf-badge.png",
-      "stadiumImage": "images/stadiums/bombo-stadium.jpg",
+      "stadiumImage": "images/stadiums/mandela-national-stadium.jpg",
       "description": "UPDF FC is the football club of the Uganda People's Defence Forces, known for their discipline and team spirit.",
       "achievements": [
         "Uganda Cup Winners (2018)",
@@ -220,7 +220,7 @@
       "location": "Njeru, Buikwe",
       "league": "Uganda Premier League",
       "badge": "images/teams/busoga-badge.png",
-      "stadiumImage": "images/stadiums/fufa-technical-centre.jpg",
+      "stadiumImage": "images/stadiums/hoima-stadium.jpg",
       "description": "Busoga United is one of the newer clubs in Ugandan football, representing the Busoga region with pride and determination.",
       "achievements": [
         "Promoted to Uganda Premier League (2019)",
@@ -254,7 +254,7 @@
       "location": "Njeru, Buikwe",
       "league": "Uganda Premier League",
       "badge": "images/teams/bul-badge.png",
-      "stadiumImage": "images/stadiums/fufa-technical-centre.jpg",
+      "stadiumImage": "images/stadiums/hoima-stadium.jpg",
       "description": "BUL FC is a modern football club backed by corporate sponsorship, focused on developing young talent and playing attractive football.",
       "achievements": [
         "Promoted to Uganda Premier League (2020)",

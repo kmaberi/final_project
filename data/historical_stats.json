@@ -1,0 +1,157 @@
+{
+  "historical_statistics": {
+    "overview": {
+      "football_introduction_year": 1901,
+      "fufa_establishment": 1924,
+      "first_international_match": 1968,
+      "total_afcon_participations": 7,
+      "afcon_victories": 1,
+      "total_clubs_founded": 200,
+      "active_premier_league_teams": 16
+    },
+    "milestones": {
+      "colonial_era": {
+        "period": "1901-1962",
+        "key_events": [
+          "Football introduction by British missionaries",
+          "First organized leagues in Kampala",
+          "FUFA establishment during colonial period",
+          "Development of major clubs"
+        ]
+      },
+      "independence_era": {
+        "period": "1962-1980",
+        "key_events": [
+          "Uganda's independence football celebrations",
+          "First international matches",
+          "1978 AFCON victory - greatest achievement",
+          "Political upheaval impact on football"
+        ]
+      },
+      "modern_era": {
+        "period": "1980-present",
+        "key_events": [
+          "Professional league restructuring",
+          "CAF competitions participation",
+          "Youth and women's football development",
+          "Infrastructure modernization"
+        ]
+      }
+    },
+    "achievements": {
+      "international": {
+        "afcon_champion": {
+          "year": 1978,
+          "venue": "Ghana",
+          "final_score": "2-0 vs Ghana",
+          "significance": "Uganda's only continental title"
+        },
+        "cecafa_cups": {
+          "total_wins": 15,
+          "recent_victory": 2019,
+          "note": "Most successful team in regional competition"
+        },
+        "afcon_participations": [
+          1962, 1968, 1974, 1978, 1996, 2017, 2019
+        ]
+      },
+      "domestic": {
+        "most_successful_clubs": [
+          {
+            "club": "SC Villa",
+            "league_titles": 16,
+            "founded": 1975,
+            "golden_era": "1980s-1990s"
+          },
+          {
+            "club": "KCCA FC",
+            "league_titles": 13,
+            "founded": 1963,
+            "recent_success": "2010s-2020s"
+          },
+          {
+            "club": "Express FC",
+            "league_titles": 6,
+            "founded": 1957,
+            "historical_significance": "One of oldest clubs"
+          }
+        ]
+      }
+    },
+    "notable_players": {
+      "legends": [
+        {
+          "name": "Phillip Omondi",
+          "era": "1970s",
+          "achievement": "1978 AFCON winner, top scorer"
+        },
+        {
+          "name": "Jimmy Kirunda",
+          "era": "1970s-1980s",
+          "achievement": "AFCON hero, prolific striker"
+        },
+        {
+          "name": "Denis Obua",
+          "era": "2000s",
+          "achievement": "International career, European experience"
+        },
+        {
+          "name": "David Obua",
+          "era": "2000s-2010s",
+          "achievement": "Captain, Hearts of Midlothian player"
+        }
+      ]
+    },
+    "infrastructure": {
+      "major_stadiums": [
+        {
+          "name": "Mandela National Stadium",
+          "capacity": 45000,
+          "opened": 1997,
+          "location": "Namboole, Wakiso",
+          "significance": "National team home venue"
+        },
+        {
+          "name": "Phillip Omondi Stadium",
+          "capacity": 10000,
+          "location": "Lugogo, Kampala",
+          "significance": "Historic venue, club matches"
+        },
+        {
+          "name": "Bombo Military Stadium",
+          "capacity": 5000,
+          "location": "Bombo",
+          "significance": "UPDF FC home ground"
+        }
+      ]
+    },
+    "development": {
+      "youth_programs": {
+        "launch_year": 2005,
+        "academies": 150,
+        "scholarship_recipients": 2000,
+        "international_transfers": 45
+      },
+      "women_football": {
+        "league_establishment": 2008,
+        "participating_teams": 12,
+        "national_team_debut": 2010,
+        "afcon_participations": 2
+      }
+    },
+    "challenges_overcome": [
+      "Colonial period restrictions on African participation",
+      "Political instability during Idi Amin era",
+      "Post-war reconstruction efforts",
+      "Limited infrastructure development",
+      "Financial constraints in professional era"
+    ],
+    "current_trends": [
+      "Increased investment in youth development",
+      "Women's football growth",
+      "Technology integration (VAR, digital platforms)",
+      "International player development",
+      "Stadium modernization projects"
+    ]
+  }
+}

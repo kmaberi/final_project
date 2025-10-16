@@ -133,7 +133,265 @@
 
             <!-- Teams Grid/List -->
             <div class="teams-container grid-view" id="teamsContainer">
-                <!-- Populated by JavaScript -->
+                <!-- Sample Team Cards with Available Images -->
+                
+                <!-- KCCA FC -->
+                <div class="team-card">
+                    <div class="team-card-image">
+                        <img src="images/stadiums/kcca-omondi-stadium.jpg" alt="KCCA FC Stadium" class="stadium-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="team-image-placeholder" style="display: none; background: linear-gradient(135deg, #1e40af, #3b82f6); color: white; min-height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                            🏟️
+                        </div>
+                    </div>
+                    <div class="team-card-content">
+                        <div class="team-badge">
+                            <img src="images/teams/kccafc-badge.jpg" alt="KCCA FC Badge" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="badge-placeholder" style="display: none; width: 60px; height: 60px; background: linear-gradient(135deg, #1e40af, #3b82f6); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                                ⚽
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">KCCA FC</h3>
+                            <p class="team-league">Uganda Premier League</p>
+                            <p class="team-founded">Founded: 1963</p>
+                            <div class="team-stats">
+                                <span class="stat-item">🏆 13 Titles</span>
+                                <span class="stat-item">⚽ 25 Players</span>
+                            </div>
+                            <div class="team-players">
+                                <span class="players-label">Key Players:</span>
+                                <div class="player-avatars">
+                                    <img src="images/players/Allan-Okello.jpg" alt="Allan Okello" class="mini-avatar" title="Allan Okello">
+                                    <img src="images/players/derrick-nsibambi.png" alt="Derrick Nsibambi" class="mini-avatar" title="Derrick Nsibambi">
+                                    <img src="images/players/New player kcca.jpg" alt="New Signing" class="mini-avatar" title="New Signing">
+                                </div>
+                            </div>
+                            <div class="team-actions">
+                                <a href="team-detail.html?id=kcca" class="btn btn-primary btn-sm">View Details</a>
+                                <button class="btn btn-secondary btn-sm favorite-btn">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Vipers SC -->
+                <div class="team-card">
+                    <div class="team-card-image">
+                        <img src="images/stadiums/st.mary's-stadium.jpg" alt="Vipers SC Stadium" class="stadium-image" onerror="console.log('Stadium image failed:', this.src); this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="team-image-placeholder" style="display: none; background: linear-gradient(135deg, #10b981, #059669); color: white; min-height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                            🏟️
+                        </div>
+                    </div>
+                    <div class="team-card-content">
+                        <div class="team-badge">
+                            <img src="images/teams/vipers-badge.png" alt="Vipers SC Badge" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="badge-placeholder" style="display: none; width: 60px; height: 60px; background: linear-gradient(135deg, #10b981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                                🐍
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Vipers SC</h3>
+                            <p class="team-league">Uganda Premier League</p>
+                            <p class="team-founded">Founded: 2013</p>
+                            <div class="team-stats">
+                                <span class="stat-item">🏆 4 Titles</span>
+                                <span class="stat-item">⚽ 28 Players</span>
+                            </div>
+                            <div class="team-actions">
+                                <a href="team-detail.html?id=vipers" class="btn btn-primary btn-sm">View Details</a>
+                                <button class="btn btn-secondary btn-sm favorite-btn">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- SC Villa -->
+                <div class="team-card">
+                    <div class="team-card-image">
+                        <img src="images/stadiums/mandela-national-stadium.jpg" alt="SC Villa Stadium" class="stadium-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="team-image-placeholder" style="display: none; background: linear-gradient(135deg, #7c3aed, #8b5cf6); color: white; min-height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                            🏟️
+                        </div>
+                    </div>
+                    <div class="team-card-content">
+                        <div class="team-badge">
+                            <img src="images/teams/scvilla-badge.png" alt="SC Villa Badge" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="badge-placeholder" style="display: none; width: 60px; height: 60px; background: linear-gradient(135deg, #7c3aed, #8b5cf6); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                                👑
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">SC Villa</h3>
+                            <p class="team-league">Uganda Premier League</p>
+                            <p class="team-founded">Founded: 1975</p>
+                            <div class="team-stats">
+                                <span class="stat-item">🏆 16 Titles</span>
+                                <span class="stat-item">⚽ 23 Players</span>
+                            </div>
+                            <div class="team-actions">
+                                <a href="team-detail.html?id=villa" class="btn btn-primary btn-sm">View Details</a>
+                                <button class="btn btn-secondary btn-sm favorite-btn">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Express FC -->
+                <div class="team-card">
+                    <div class="team-card-image">
+                        <img src="images/stadiums/nakivubo-stadium.jpg" alt="Express FC Stadium" class="stadium-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="team-image-placeholder" style="display: none; background: linear-gradient(135deg, #dc2626, #ef4444); color: white; min-height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                            🏟️
+                        </div>
+                    </div>
+                    <div class="team-card-content">
+                        <div class="team-badge">
+                            <img src="images/teams/express-badge.png" alt="Express FC Badge" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="badge-placeholder" style="display: none; width: 60px; height: 60px; background: linear-gradient(135deg, #dc2626, #ef4444); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                                🚂
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Express FC</h3>
+                            <p class="team-league">Uganda Premier League</p>
+                            <p class="team-founded">Founded: 1957</p>
+                            <div class="team-stats">
+                                <span class="stat-item">🏆 7 Titles</span>
+                                <span class="stat-item">⚽ 24 Players</span>
+                            </div>
+                            <div class="team-actions">
+                                <a href="team-detail.html?id=express" class="btn btn-primary btn-sm">View Details</a>
+                                <button class="btn btn-secondary btn-sm favorite-btn">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- URA FC -->
+                <div class="team-card">
+                    <div class="team-card-image">
+                        <img src="images/stadiums/hoima-stadium.jpg" alt="URA FC Stadium" class="stadium-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="team-image-placeholder" style="display: none; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; min-height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                            🏟️
+                        </div>
+                    </div>
+                    <div class="team-card-content">
+                        <div class="team-badge">
+                            <img src="images/teams/ura-badge.png" alt="URA FC Badge" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="badge-placeholder" style="display: none; width: 60px; height: 60px; background: linear-gradient(135deg, #f59e0b, #d97706); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                                💰
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">URA FC</h3>
+                            <p class="team-league">Uganda Premier League</p>
+                            <p class="team-founded">Founded: 2005</p>
+                            <div class="team-stats">
+                                <span class="stat-item">🏆 1 Title</span>
+                                <span class="stat-item">⚽ 26 Players</span>
+                            </div>
+                            <div class="team-actions">
+                                <a href="team-detail.html?id=ura" class="btn btn-primary btn-sm">View Details</a>
+                                <button class="btn btn-secondary btn-sm favorite-btn">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- BUL FC -->
+                <div class="team-card">
+                    <div class="team-card-image">
+                        <img src="images/stadiums/mandela-national-stadium.jpg" alt="BUL FC Stadium" class="stadium-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="team-image-placeholder" style="display: none; background: linear-gradient(135deg, #059669, #10b981); color: white; min-height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                            🏟️
+                        </div>
+                    </div>
+                    <div class="team-card-content">
+                        <div class="team-badge">
+                            <img src="images/teams/bul-badge.png" alt="BUL FC Badge" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="badge-placeholder" style="display: none; width: 60px; height: 60px; background: linear-gradient(135deg, #059669, #10b981); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                                💡
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">BUL FC</h3>
+                            <p class="team-league">Uganda Premier League</p>
+                            <p class="team-founded">Founded: 1968</p>
+                            <div class="team-stats">
+                                <span class="stat-item">🏆 2 Titles</span>
+                                <span class="stat-item">⚽ 22 Players</span>
+                            </div>
+                            <div class="team-actions">
+                                <a href="team-detail.html?id=bul" class="btn btn-primary btn-sm">View Details</a>
+                                <button class="btn btn-secondary btn-sm favorite-btn">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- UPDF FC -->
+                <div class="team-card">
+                    <div class="team-card-image">
+                        <img src="images/stadiums/mandela-national-stadium.jpg" alt="UPDF FC Stadium" class="stadium-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="team-image-placeholder" style="display: none; background: linear-gradient(135deg, #065f46, #047857); color: white; min-height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                            🏟️
+                        </div>
+                    </div>
+                    <div class="team-card-content">
+                        <div class="team-badge">
+                            <img src="images/teams/updf-badge.png" alt="UPDF FC Badge" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="badge-placeholder" style="display: none; width: 60px; height: 60px; background: linear-gradient(135deg, #065f46, #047857); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                                🛡️
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">UPDF FC</h3>
+                            <p class="team-league">Uganda Premier League</p>
+                            <p class="team-founded">Founded: 1992</p>
+                            <div class="team-stats">
+                                <span class="stat-item">🏆 0 Titles</span>
+                                <span class="stat-item">⚽ 24 Players</span>
+                            </div>
+                            <div class="team-actions">
+                                <a href="team-detail.html?id=updf" class="btn btn-primary btn-sm">View Details</a>
+                                <button class="btn btn-secondary btn-sm favorite-btn">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Busoga United -->
+                <div class="team-card">
+                    <div class="team-card-image">
+                        <img src="images/stadiums/hoima-stadium.jpg" alt="Busoga United Stadium" class="stadium-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="team-image-placeholder" style="display: none; background: linear-gradient(135deg, #b45309, #d97706); color: white; min-height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                            🏟️
+                        </div>
+                    </div>
+                    <div class="team-card-content">
+                        <div class="team-badge">
+                            <img src="images/teams/busoga-budge.png" alt="Busoga United Badge" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="badge-placeholder" style="display: none; width: 60px; height: 60px; background: linear-gradient(135deg, #b45309, #d97706); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                                🌊
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Busoga United</h3>
+                            <p class="team-league">Uganda Premier League</p>
+                            <p class="team-founded">Founded: 1995</p>
+                            <div class="team-stats">
+                                <span class="stat-item">🏆 0 Titles</span>
+                                <span class="stat-item">⚽ 22 Players</span>
+                            </div>
+                            <div class="team-actions">
+                                <a href="team-detail.html?id=busoga" class="btn btn-primary btn-sm">View Details</a>
+                                <button class="btn btn-secondary btn-sm favorite-btn">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- More teams will be populated by JavaScript -->
             </div>
 
             <div class="loading" id="teamsLoading">

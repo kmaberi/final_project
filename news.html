@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/news.css">
+    <link rel="stylesheet" href="css/image-styles.css">
     <link rel="stylesheet" href="css/about.css">    
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 </head>
@@ -110,12 +111,120 @@
                 <div class="news-feed">
                     <!-- Featured Post -->
                     <article class="featured-post" id="featuredPost">
-                        <!-- Populated by JS -->
+                        <div class="featured-post-image">
+                            <img src="images/players/New player kcca.jpg" alt="New KCCA Player" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="featured-image-placeholder" style="display: none; background: linear-gradient(135deg, #1e40af, #3b82f6); color: white; min-height: 300px; display: flex; align-items: center; justify-content: center; font-size: 4rem;">
+                                ⭐
+                            </div>
+                        </div>
+                        <div class="featured-post-content">
+                            <div class="featured-post-meta">
+                                <span class="category">Transfer News</span>
+                                <span class="date">Today</span>
+                            </div>
+                            <h2>KCCA FC's Blockbuster New Signing</h2>
+                            <p>KCCA FC has completed the signing of a highly talented player who promises to add significant strength to their squad for the upcoming season. The new addition brings exceptional skills and experience...</p>
+                            <a href="#" class="read-more-btn">Read Full Article →</a>
+                        </div>
                     </article>
 
                     <!-- News Posts Grid -->
                     <div class="news-grid" id="newsGrid">
-                        <!-- Populated by JS -->
+                        <!-- Allan Okello News -->
+                        <article class="news-card">
+                            <div class="news-card-image">
+                                <img src="images/players/Allan-Okello.jpg" alt="Allan Okello" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="news-image-placeholder" style="display: none; background: linear-gradient(135deg, #1e40af, #3b82f6); color: white; min-height: 200px; display: flex; align-items: center; justify-content: center; font-size: 2rem;">
+                                    ⚽
+                                </div>
+                            </div>
+                            <div class="news-card-content">
+                                <div class="news-meta">
+                                    <span class="category">Player News</span>
+                                    <span class="date">1 hour ago</span>
+                                </div>
+                                <h3>Allan Okello's Midfield Mastery</h3>
+                                <p>KCCA's creative midfielder continues to impress with his technical skills and vision...</p>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </article>
+                        
+                        <!-- Emanuel Okwi News -->
+                        <article class="news-card">
+                            <div class="news-card-image">
+                                <img src="images/players/emanuel-okwi.png" alt="Emanuel Okwi" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="news-image-placeholder" style="display: none; background: linear-gradient(135deg, #10b981, #059669); color: white; min-height: 200px; display: flex; align-items: center; justify-content: center; font-size: 2rem;">
+                                    ⚽
+                                </div>
+                            </div>
+                            <div class="news-card-content">
+                                <div class="news-meta">
+                                    <span class="category">Player News</span>
+                                    <span class="date">2 hours ago</span>
+                                </div>
+                                <h3>Emanuel Okwi Scores Decisive Goal</h3>
+                                <p>The striker's brilliant performance leads team to crucial victory...</p>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </article>
+                        
+                        <!-- KCCA New Signing News -->
+                        <article class="news-card">
+                            <div class="news-card-image">
+                                <img src="images/players/kcca-newsigning.jpg" alt="KCCA New Signing" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="news-image-placeholder" style="display: none; background: linear-gradient(135deg, #1e40af, #3b82f6); color: white; min-height: 200px; display: flex; align-items: center; justify-content: center; font-size: 2rem;">
+                                    ✨
+                                </div>
+                            </div>
+                            <div class="news-card-content">
+                                <div class="news-meta">
+                                    <span class="category">Transfer News</span>
+                                    <span class="date">3 hours ago</span>
+                                </div>
+                                <h3>KCCA FC Unveils New Signing</h3>
+                                <p>The club strengthens their squad with a promising new addition to the team...</p>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </article>
+                        
+                        <!-- Sample News Card with Team Badge -->
+                        <article class="news-card">
+                            <div class="news-card-image">
+                                <img src="images/teams/vipers-badge.png" alt="Vipers SC Badge" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="news-image-placeholder" style="display: none; background: linear-gradient(135deg, #10b981, #059669); color: white; min-height: 200px; display: flex; align-items: center; justify-content: center; font-size: 2rem;">
+                                    🐍
+                                </div>
+                            </div>
+                            <div class="news-card-content">
+                                <div class="news-meta">
+                                    <span class="category">Team News</span>
+                                    <span class="date">5 hours ago</span>
+                                </div>
+                                <h3>Vipers SC Announces New Signings</h3>
+                                <p>The club strengthens their squad with strategic new acquisitions...</p>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </article>
+                        
+                        <!-- Sample News Card with Stadium Image -->
+                        <article class="news-card">
+                            <div class="news-card-image">
+                                <img src="images/stadiums/hoima-stadium.jpg" alt="Hoima Stadium" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="news-image-placeholder" style="display: none; background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: white; min-height: 200px; display: flex; align-items: center; justify-content: center; font-size: 2rem;">
+                                    🏠
+                                </div>
+                            </div>
+                            <div class="news-card-content">
+                                <div class="news-meta">
+                                    <span class="category">Infrastructure</span>
+                                    <span class="date">1 day ago</span>
+                                </div>
+                                <h3>New Regional Stadium Opens</h3>
+                                <p>State-of-the-art facilities bring modern football to local communities...</p>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </article>
+                        <!-- More cards will be populated by JavaScript -->
                     </div>
 
                     <div class="loading" id="newsLoading">

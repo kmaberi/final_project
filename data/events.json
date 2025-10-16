@@ -1,4 +1,10 @@
 {
+  "metadata": {
+    "total_events": 35,
+    "last_updated": "2024-10-15",
+    "description": "Comprehensive timeline of Uganda football history from colonial era to present",
+    "sources": ["FUFA Archives", "CAF Records", "Uganda Sports Media", "Club Archives"]
+  },
   "events": [
     {
       "id": 1,
@@ -219,6 +225,171 @@
       "tags": ["founding", "express"],
       "team": "Express FC",
       "type": "league"
+    },
+    {
+      "id": 21,
+      "year": 1924,
+      "title": "FUFA Formation",
+      "description": "The Federation of Uganda Football Associations (FUFA) was established during the colonial period, organizing football activities across the protectorate.",
+      "image": "images/events/fufa-1924-formation.jpg",
+      "source": "FUFA Historical Archives",
+      "tags": ["founding", "administration", "colonial"],
+      "team": null,
+      "type": "administrative"
+    },
+    {
+      "id": 22,
+      "year": 1911,
+      "title": "First Organized Football League",
+      "description": "The first organized football league in Uganda was established during the colonial era, primarily featuring teams from Kampala and surrounding areas.",
+      "image": "images/events/first-league-1911.jpg",
+      "source": "Colonial Sports Records",
+      "tags": ["league", "colonial", "first"],
+      "team": null,
+      "type": "league"
+    },
+    {
+      "id": 23,
+      "year": 1901,
+      "title": "Football Introduced to Uganda",
+      "description": "Football was first introduced to Uganda by British colonial administrators and missionaries, marking the beginning of organized sports in the protectorate.",
+      "image": "images/events/football-introduction-1901.jpg",
+      "source": "Colonial Historical Records",
+      "tags": ["introduction", "colonial", "origins"],
+      "team": null,
+      "type": "historical"
+    },
+    {
+      "id": 24,
+      "year": 1962,
+      "title": "Uganda Independence Football Celebration",
+      "description": "Special football matches were organized to celebrate Uganda's independence, featuring local teams and marking a new era for Ugandan sports.",
+      "image": "images/events/independence-1962-football.jpg",
+      "source": "Independence Archives",
+      "tags": ["independence", "celebration", "national"],
+      "team": null,
+      "type": "historical"
+    },
+    {
+      "id": 25,
+      "year": 1968,
+      "title": "First International Match",
+      "description": "Uganda played their first official international football match as an independent nation, marking the beginning of the Uganda Cranes' international journey.",
+      "image": "images/events/first-international-1968.jpg",
+      "source": "FUFA International Records",
+      "tags": ["international", "debut", "cranes"],
+      "team": "Uganda Cranes",
+      "type": "international"
+    },
+    {
+      "id": 26,
+      "year": 1972,
+      "title": "Idi Amin Era Impact on Football",
+      "description": "The Idi Amin regime significantly impacted Ugandan football, with political interference affecting player movements and international participation.",
+      "image": "images/events/amin-era-1972-impact.jpg",
+      "source": "Historical Sports Analysis",
+      "tags": ["political", "disruption", "amin-era"],
+      "team": null,
+      "type": "historical"
+    },
+    {
+      "id": 27,
+      "year": 1980,
+      "title": "Post-War Football Revival",
+      "description": "Following the Uganda-Tanzania War and fall of Idi Amin, efforts began to rebuild and revive Ugandan football infrastructure and competitions.",
+      "image": "images/events/post-war-1980-revival.jpg",
+      "source": "FUFA Reconstruction Records",
+      "tags": ["revival", "reconstruction", "post-war"],
+      "team": null,
+      "type": "historical"
+    },
+    {
+      "id": 28,
+      "year": 1976,
+      "title": "AFCON 1978 Qualification Campaign",
+      "description": "Uganda Cranes' successful qualification campaign for the 1978 Africa Cup of Nations, setting the stage for their historic triumph.",
+      "image": "images/events/afcon-qualification-1976.jpg",
+      "source": "CAF Qualification Records",
+      "tags": ["qualification", "international", "afcon", "cranes"],
+      "team": "Uganda Cranes",
+      "type": "international"
+    },
+    {
+      "id": 29,
+      "year": 1987,
+      "title": "National Stadium Construction",
+      "description": "Construction began on the Mandela National Stadium (formerly Namboole Stadium), Uganda's premier football venue.",
+      "image": "images/events/stadium-construction-1987.jpg",
+      "source": "Ministry of Sports Infrastructure",
+      "tags": ["infrastructure", "stadium", "construction"],
+      "team": null,
+      "type": "infrastructure"
+    },
+    {
+      "id": 30,
+      "year": 1996,
+      "title": "Uganda Returns to AFCON",
+      "description": "After an 18-year absence, Uganda Cranes qualified for and participated in the 1996 Africa Cup of Nations in South Africa.",
+      "image": "images/events/afcon-return-1996.jpg",
+      "source": "CAF Tournament Records",
+      "tags": ["international", "afcon", "return", "cranes"],
+      "team": "Uganda Cranes",
+      "type": "international"
+    },
+    {
+      "id": 31,
+      "year": 2001,
+      "title": "CECAFA Cup Victory",
+      "description": "Uganda Cranes won the CECAFA Cup, defeating Kenya in the final and asserting regional dominance in East African football.",
+      "image": "images/events/cecafa-victory-2001.jpg",
+      "source": "CECAFA Tournament Records",
+      "tags": ["international", "cecafa", "victory", "cranes"],
+      "team": "Uganda Cranes",
+      "type": "international"
+    },
+    {
+      "id": 32,
+      "year": 2008,
+      "title": "Women's Football Development",
+      "description": "FUFA launched comprehensive women's football development programs, establishing the Uganda Women's Premier League.",
+      "image": "images/events/women-football-2008.jpg",
+      "source": "FUFA Women's Division",
+      "tags": ["women", "development", "league"],
+      "team": null,
+      "type": "development"
+    },
+    {
+      "id": 33,
+      "year": 2012,
+      "title": "CAF Confederation Cup Success",
+      "description": "Multiple Ugandan clubs participated in CAF competitions, with improved performances showcasing the growth of local football.",
+      "image": "images/events/caf-participation-2012.jpg",
+      "source": "CAF Competition Records",
+      "tags": ["international", "caf", "clubs"],
+      "team": null,
+      "type": "international"
+    },
+    {
+      "id": 34,
+      "year": 2024,
+      "title": "Modern Era Digital Football",
+      "description": "Introduction of VAR technology, digital ticketing, and live streaming services transformed the fan experience in Ugandan football.",
+      "image": "images/events/digital-football-2024.jpg",
+      "source": "FUFA Technology Division",
+      "tags": ["technology", "modern", "digital"],
+      "team": null,
+      "type": "technology"
+    },
+    {
+      "id": 35,
+      "year": 2017,
+      "title": "AFCON 2019 Qualification",
+      "description": "Uganda Cranes secured qualification for the 2019 Africa Cup of Nations in Egypt, ending a long absence from the continental tournament.",
+      "image": "images/events/afcon-qualification-2017.jpg",
+      "source": "CAF Qualification Records",
+      "tags": ["international", "afcon", "qualification", "cranes"],
+      "team": "Uganda Cranes",
+      "type": "international"
     }
   ]
 }

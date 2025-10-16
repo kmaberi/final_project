@@ -24,21 +24,36 @@
     padding: 0;
 }
 
-/* Hide the desktop header on auth page */
-.auth-page .desktop-header {
-    display: none !important;
-}
-
-/* Hide mobile header if it exists */
-.auth-page .mobile-header {
-    display: none !important;
-}
-
+/* Headers are now visible on auth page for navigation */
+/* Adjust auth container to account for header */
 .auth-container {
     display: flex;
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh - 65px); /* Account for mobile header height */
     position: relative;
+    margin-top: 0;
+}
+
+/* Close button for mobile header */
+.close-btn-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: var(--transition);
+}
+
+.close-btn-mobile:hover {
+    color: var(--primary-color);
+}
+
+/* Desktop responsive adjustments */
+@media (min-width: 768px) {
+    .auth-container {
+        min-height: calc(100vh - 80px); /* Account for desktop header height */
+    }
 }
 
 /* Left Side - Branding */

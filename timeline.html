@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/image-styles.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 
@@ -152,7 +153,61 @@
                 </div>
 
                 <div class="timeline-grid" id="timelineGrid">
-                    <!-- Populated by JavaScript -->
+                    <!-- Sample event card with image -->
+                    <div class="timeline-card sample-card">
+                        <div class="timeline-card-image">
+                            <img src="images/events/cranes-1978-afcon-win.svg" alt="Uganda AFCON 1978 Win" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="timeline-image-placeholder" style="display: none; background: linear-gradient(135deg, #0b6cff, #4f46e5); color: white; min-height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                                🏆
+                            </div>
+                        </div>
+                        <div class="timeline-card-content">
+                            <div class="timeline-date">1978</div>
+                            <h3 class="timeline-title">Uganda AFCON Victory</h3>
+                            <p class="timeline-description">Uganda's historic victory in the Africa Cup of Nations, marking a golden moment in the nation's football history.</p>
+                            <div class="timeline-tags">
+                                <span class="timeline-tag">International</span>
+                                <span class="timeline-tag">Championship</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-card sample-card">
+                        <div class="timeline-card-image">
+                            <img src="images/events/vipers-2013-founding.svg" alt="Vipers SC Founding 2013" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="timeline-image-placeholder" style="display: none; background: linear-gradient(135deg, #10b981, #059669); color: white; min-height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                                🐍
+                            </div>
+                        </div>
+                        <div class="timeline-card-content">
+                            <div class="timeline-date">2013</div>
+                            <h3 class="timeline-title">Vipers SC Founded</h3>
+                            <p class="timeline-description">The establishment of Vipers Sports Club, which would go on to become one of Uganda's most successful modern teams.</p>
+                            <div class="timeline-tags">
+                                <span class="timeline-tag">Club Formation</span>
+                                <span class="timeline-tag">Modern Era</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-card sample-card">
+                        <div class="timeline-card-image">
+                            <img src="images/events/football-introduction-1901.svg" alt="Football Introduction 1901" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="timeline-image-placeholder" style="display: none; background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: white; min-height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                                ⚽
+                            </div>
+                        </div>
+                        <div class="timeline-card-content">
+                            <div class="timeline-date">1901</div>
+                            <h3 class="timeline-title">Football Introduced to Uganda</h3>
+                            <p class="timeline-description">The introduction of association football to Uganda, marking the beginning of the sport's journey in the country.</p>
+                            <div class="timeline-tags">
+                                <span class="timeline-tag">Historical</span>
+                                <span class="timeline-tag">Foundation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More cards will be populated by JavaScript -->
                 </div>
 
                 <div class="loading" id="timelineLoading">

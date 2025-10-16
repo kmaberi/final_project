@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stadium Images Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .stadium-test { margin: 20px 0; padding: 15px; border: 1px solid #ccc; border-radius: 8px; }
+        .stadium-test img { max-width: 300px; height: 200px; object-fit: cover; border-radius: 8px; }
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+    <h1>Stadium Images Test</h1>
+    
+    <div class="stadium-test">
+        <h3>1. Mandela National Stadium</h3>
+        <img src="images/stadiums/mandela-national-stadium.jpg" alt="Mandela National Stadium" 
+             onload="this.nextElementSibling.textContent='✅ Loaded successfully'; this.nextElementSibling.className='success';" 
+             onerror="this.nextElementSibling.textContent='❌ Failed to load: ' + this.src; this.nextElementSibling.className='error';">
+        <p>Loading...</p>
+    </div>
+    
+    <div class="stadium-test">
+        <h3>2. KCCA Omondi Stadium</h3>
+        <img src="images/stadiums/kcca-omondi-stadium.jpg" alt="KCCA Omondi Stadium" 
+             onload="this.nextElementSibling.textContent='✅ Loaded successfully'; this.nextElementSibling.className='success';" 
+             onerror="this.nextElementSibling.textContent='❌ Failed to load: ' + this.src; this.nextElementSibling.className='error';">
+        <p>Loading...</p>
+    </div>
+    
+    <div class="stadium-test">
+        <h3>3. St. Mary's Stadium (with apostrophe)</h3>
+        <img src="images/stadiums/st.mary's-stadium.jpg" alt="St. Mary's Stadium" 
+             onload="this.nextElementSibling.textContent='✅ Loaded successfully'; this.nextElementSibling.className='success';" 
+             onerror="this.nextElementSibling.textContent='❌ Failed to load: ' + this.src; this.nextElementSibling.className='error';">
+        <p>Loading...</p>
+    </div>
+    
+    <div class="stadium-test">
+        <h3>4. St. Mary's Stadium (URL encoded)</h3>
+        <img src="images/stadiums/st.mary%27s-stadium.jpg" alt="St. Mary's Stadium Encoded" 
+             onload="this.nextElementSibling.textContent='✅ Loaded successfully'; this.nextElementSibling.className='success';" 
+             onerror="this.nextElementSibling.textContent='❌ Failed to load: ' + this.src; this.nextElementSibling.className='error';">
+        <p>Loading...</p>
+    </div>
+    
+    <div class="stadium-test">
+        <h3>5. Nakivubo Stadium</h3>
+        <img src="images/stadiums/nakivubo-stadium.jpg" alt="Nakivubo Stadium" 
+             onload="this.nextElementSibling.textContent='✅ Loaded successfully'; this.nextElementSibling.className='success';" 
+             onerror="this.nextElementSibling.textContent='❌ Failed to load: ' + this.src; this.nextElementSibling.className='error';">
+        <p>Loading...</p>
+    </div>
+    
+    <div class="stadium-test">
+        <h3>6. Hoima Stadium</h3>
+        <img src="images/stadiums/hoima-stadium.jpg" alt="Hoima Stadium" 
+             onload="this.nextElementSibling.textContent='✅ Loaded successfully'; this.nextElementSibling.className='success';" 
+             onerror="this.nextElementSibling.textContent='❌ Failed to load: ' + this.src; this.nextElementSibling.className='error';">
+        <p>Loading...</p>
+    </div>
+
+    <script>
+        // Check if all images exist
+        const images = document.querySelectorAll('img');
+        let loadedCount = 0;
+        let errorCount = 0;
+        
+        images.forEach(img => {
+            img.addEventListener('load', () => {
+                loadedCount++;
+                updateStatus();
+            });
+            img.addEventListener('error', () => {
+                errorCount++;
+                updateStatus();
+            });
+        });
+        
+        function updateStatus() {
+            if (loadedCount + errorCount === images.length) {
+                document.body.insertAdjacentHTML('beforeend', 
+                    `<div style="margin-top: 30px; padding: 15px; background: #f0f0f0; border-radius: 8px;">
+                        <h3>Final Results:</h3>
+                        <p><strong>Total Images:</strong> ${images.length}</p>
+                        <p><strong>Successfully Loaded:</strong> <span class="success">${loadedCount}</span></p>
+                        <p><strong>Failed to Load:</strong> <span class="error">${errorCount}</span></p>
+                    </div>`
+                );
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#8B4513"/>
+  
+  <!-- Colonial era buildings -->
+  <rect x="50" y="150" width="80" height="100" fill="#D2691E"/>
+  <polygon points="50,150 90,120 130,150" fill="#8B0000"/>
+  <rect x="250" y="170" width="100" height="80" fill="#D2691E"/>
+  <polygon points="250,170 300,140 350,170" fill="#8B0000"/>
+  
+  <!-- Football field -->
+  <rect x="80" y="220" width="240" height="60" fill="#228B22"/>
+  <rect x="85" y="225" width="230" height="50" fill="none" stroke="white" stroke-width="2"/>
+  <circle cx="200" cy="250" r="20" fill="none" stroke="white" stroke-width="2"/>
+  <circle cx="200" cy="250" r="2" fill="white"/>
+  
+  <!-- Football -->
+  <circle cx="200" cy="200" r="15" fill="white"/>
+  <path d="M 190 195 Q 200 185 210 195" fill="none" stroke="black" stroke-width="2"/>
+  <path d="M 195 210 Q 200 200 205 210" fill="none" stroke="black" stroke-width="1"/>
+  
+  <!-- Players -->
+  <circle cx="160" cy="240" r="8" fill="#8B4513"/>
+  <rect x="155" y="248" width="10" height="15" fill="#FFFFFF"/>
+  <circle cx="240" cy="260" r="8" fill="#654321"/>
+  <rect x="235" y="268" width="10" height="15" fill="#FFFFFF"/>
+  
+  <!-- Title -->
+  <text x="200" y="30" text-anchor="middle" font-family="serif" font-size="16" font-weight="bold" fill="#FFFFFF">Football Comes to Uganda</text>
+  <text x="200" y="50" text-anchor="middle" font-family="serif" font-size="12" fill="#FFFFFF">British Colonial Period - 1901</text>
+  <text x="200" y="80" text-anchor="middle" font-family="serif" font-size="10" fill="#FFFFFF">Introduced by missionaries and administrators</text>
+  
+  <!-- Decorative elements -->
+  <text x="50" y="120" font-family="serif" font-size="10" fill="#FFFFFF">Mission</text>
+  <text x="280" y="135" font-family="serif" font-size="10" fill="#FFFFFF">Government House</text>
+</svg>

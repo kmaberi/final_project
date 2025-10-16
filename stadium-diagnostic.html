@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stadium Images Diagnostic</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .status {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .image-test {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 300px;
+        }
+        .image-test img {
+            width: 250px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 2px solid #ddd;
+        }
+        .success { border-color: #22c55e !important; }
+        .error { border-color: #ef4444 !important; }
+        .status-text { 
+            margin-top: 10px; 
+            font-weight: bold;
+        }
+        .success-text { color: #22c55e; }
+        .error-text { color: #ef4444; }
+        h1 { color: #333; text-align: center; }
+        .summary { 
+            text-align: center; 
+            font-size: 1.2rem; 
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏟️ Stadium Images Diagnostic</h1>
+        
+        <div class="status">
+            <h3>Status: <span id="overallStatus">Checking images...</span></h3>
+            <p>This page tests all stadium images to ensure they load correctly across your website.</p>
+        </div>
+
+        <div class="image-test">
+            <h4>Mandela National Stadium</h4>
+            <img src="images/stadiums/mandela-national-stadium.jpg" alt="Mandela National Stadium" 
+                 onload="imageLoaded(this)" onerror="imageError(this)">
+            <div class="status-text" data-status="loading">⏳ Loading...</div>
+        </div>
+
+        <div class="image-test">
+            <h4>KCCA Omondi Stadium</h4>
+            <img src="images/stadiums/kcca-omondi-stadium.jpg" alt="KCCA Omondi Stadium" 
+                 onload="imageLoaded(this)" onerror="imageError(this)">
+            <div class="status-text" data-status="loading">⏳ Loading...</div>
+        </div>
+
+        <div class="image-test">
+            <h4>St. Mary's Stadium</h4>
+            <img src="images/stadiums/st.mary's-stadium.jpg" alt="St. Mary's Stadium" 
+                 onload="imageLoaded(this)" onerror="imageError(this)">
+            <div class="status-text" data-status="loading">⏳ Loading...</div>
+        </div>
+
+        <div class="image-test">
+            <h4>Nakivubo Stadium</h4>
+            <img src="images/stadiums/nakivubo-stadium.jpg" alt="Nakivubo Stadium" 
+                 onload="imageLoaded(this)" onerror="imageError(this)">
+            <div class="status-text" data-status="loading">⏳ Loading...</div>
+        </div>
+
+        <div class="image-test">
+            <h4>Hoima Stadium</h4>
+            <img src="images/stadiums/hoima-stadium.jpg" alt="Hoima Stadium" 
+                 onload="imageLoaded(this)" onerror="imageError(this)">
+            <div class="status-text" data-status="loading">⏳ Loading...</div>
+        </div>
+
+        <div class="summary" id="summary"></div>
+    </div>
+
+    <script>
+        let totalImages = 5;
+        let loadedImages = 0;
+        let failedImages = 0;
+        let results = [];
+
+        function imageLoaded(img) {
+            loadedImages++;
+            img.classList.add('success');
+            const statusDiv = img.nextElementSibling;
+            statusDiv.textContent = '✅ Loaded Successfully';
+            statusDiv.className = 'status-text success-text';
+            statusDiv.setAttribute('data-status', 'success');
+            results.push({ name: img.alt, status: 'success' });
+            updateOverallStatus();
+        }
+
+        function imageError(img) {
+            failedImages++;
+            img.classList.add('error');
+            img.style.display = 'none';
+            const statusDiv = img.nextElementSibling;
+            statusDiv.textContent = '❌ Failed to Load';
+            statusDiv.className = 'status-text error-text';
+            statusDiv.setAttribute('data-status', 'error');
+            results.push({ name: img.alt, status: 'error', src: img.src });
+            updateOverallStatus();
+        }
+
+        function updateOverallStatus() {
+            const processed = loadedImages + failedImages;
+            
+            if (processed < totalImages) {
+                document.getElementById('overallStatus').textContent = `Checking... (${processed}/${totalImages})`;
+                return;
+            }
+
+            // All images processed
+            const statusEl = document.getElementById('overallStatus');
+            const summaryEl = document.getElementById('summary');
+            
+            if (failedImages === 0) {
+                statusEl.textContent = '🎉 All stadium images loaded successfully!';
+                statusEl.className = 'success-text';
+                summaryEl.innerHTML = `
+                    <div style="background: #dcfce7; border: 1px solid #22c55e; border-radius: 8px; padding: 20px; margin-top: 20px;">
+                        <h3 style="color: #16a34a; margin-top: 0;">✅ Perfect! All Images Working</h3>
+                        <p>All ${totalImages} stadium images are loading correctly. Your website should display all stadium images properly.</p>
+                    </div>
+                `;
+            } else {
+                statusEl.textContent = `⚠️ ${failedImages} image(s) failed to load`;
+                statusEl.className = 'error-text';
+                
+                const failedList = results.filter(r => r.status === 'error')
+                    .map(r => `<li><strong>${r.name}</strong><br><small>Path: ${r.src}</small></li>`)
+                    .join('');
+                
+                summaryEl.innerHTML = `
+                    <div style="background: #fef2f2; border: 1px solid #ef4444; border-radius: 8px; padding: 20px; margin-top: 20px;">
+                        <h3 style="color: #dc2626; margin-top: 0;">❌ Issues Found</h3>
+                        <p><strong>${loadedImages}</strong> images loaded successfully, <strong>${failedImages}</strong> failed.</p>
+                        <h4>Failed Images:</h4>
+                        <ul style="text-align: left; display: inline-block;">${failedList}</ul>
+                        <p><em>Check if these image files exist in the correct paths.</em></p>
+                    </div>
+                `;
+            }
+        }
+
+        // Timeout check
+        setTimeout(() => {
+            const processed = loadedImages + failedImages;
+            if (processed < totalImages) {
+                document.getElementById('overallStatus').textContent = '⏳ Some images are taking time to load...';
+            }
+        }, 5000);
+    </script>
+</body>
+</html>

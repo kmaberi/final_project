@@ -1,0 +1,23 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#FFD700"/>
+  
+  <!-- Uganda flag colors -->
+  <rect x="0" y="0" width="400" height="50" fill="#000000"/>
+  <rect x="0" y="50" width="400" height="50" fill="#FFFF00"/>
+  <rect x="0" y="100" width="400" height="50" fill="#FF0000"/>
+  <rect x="0" y="150" width="400" height="50" fill="#000000"/>
+  <rect x="0" y="200" width="400" height="50" fill="#FFFF00"/>
+  <rect x="0" y="250" width="400" height="50" fill="#FF0000"/>
+  
+  <!-- Crested crane symbol -->
+  <circle cx="200" cy="150" r="80" fill="white" opacity="0.8"/>
+  <text x="200" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#003366">UGANDA</text>
+  <text x="200" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#003366">🏆</text>
+  <text x="200" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#003366">AFCON 1978</text>
+  <text x="200" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#003366">CHAMPIONS</text>
+  
+  <!-- Trophy -->
+  <text x="200" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#003366">Uganda Cranes - Africa Cup of Nations Winners</text>
+  <text x="200" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#003366">Ghana 0-2 Uganda • March 12, 1978</text>
+</svg>

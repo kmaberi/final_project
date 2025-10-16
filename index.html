@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/image-styles.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="manifest" href="data/manifest.json">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -88,12 +89,18 @@
                     <a href="timeline.html" class="btn btn-primary">Explore Now →</a>
                 </div>
                 <div class="hero-image">
-                    <div class="hero-placeholder">
-                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                        </svg>
+                    <div class="hero-image-container">
+                        <img src="images/stadiums/mandela-national-stadium.jpg" alt="Mandela National Stadium" class="hero-bg-image" onerror="console.log('Image failed to load:', this.src); this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="hero-placeholder" style="display: none;">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </div>
+                        <div class="hero-overlay">
+                            <img src="images/logo.svg" alt="Uganda Footy Hub Logo" class="hero-logo" onerror="this.style.display='none'">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -132,6 +139,62 @@
             </div>
         </section>
 
+        <!-- Featured Players -->
+        <section class="featured-section">
+            <div class="container">
+                <h2>Featured Players</h2>
+                <div class="featured-players-grid">
+                    <!-- Allan Okello -->
+                    <div class="player-feature-card">
+                        <div class="player-image">
+                            <img src="images/players/Allan-Okello.jpg" alt="Allan Okello" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="player-placeholder" style="display: none; width: 100px; height: 100px; background: linear-gradient(135deg, #0b6cff, #4f46e5); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                                ⚽
+                            </div>
+                        </div>
+                        <div class="player-info">
+                            <h3>Allan Okello</h3>
+                            <p class="player-position">Midfielder</p>
+                            <p class="player-team">KCCA FC</p>
+                            <a href="players.html?id=allan-okello" class="btn btn-secondary btn-sm">View Profile</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Emanuel Okwi -->
+                    <div class="player-feature-card">
+                        <div class="player-image">
+                            <img src="images/players/emanuel-okwi.png" alt="Emanuel Okwi" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="player-placeholder" style="display: none; width: 100px; height: 100px; background: linear-gradient(135deg, #10b981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                                ⚽
+                            </div>
+                        </div>
+                        <div class="player-info">
+                            <h3>Emanuel Okwi</h3>
+                            <p class="player-position">Forward</p>
+                            <p class="player-team">International</p>
+                            <a href="players.html?id=emanuel-okwi" class="btn btn-secondary btn-sm">View Profile</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Derrick Nsibambi -->
+                    <div class="player-feature-card">
+                        <div class="player-image">
+                            <img src="images/players/derrick-nsibambi.png" alt="Derrick Nsibambi" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="player-placeholder" style="display: none; width: 100px; height: 100px; background: linear-gradient(135deg, #1e40af, #3b82f6); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                                ⚽
+                            </div>
+                        </div>
+                        <div class="player-info">
+                            <h3>Derrick Nsibambi</h3>
+                            <p class="player-position">Striker</p>
+                            <p class="player-team">KCCA FC</p>
+                            <a href="players.html?id=derrick-nsibambi" class="btn btn-secondary btn-sm">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <!-- Featured Teams -->
         <section class="featured-section">
             <div class="container">
