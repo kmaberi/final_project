@@ -35,9 +35,11 @@
     <div class="image-test">
         <h3>Express Promotion Image</h3>
         <img src="images/teams/express_promotion.jpg" alt="Express Promotion" 
-             onload="this.nextElementSibling.textContent='✅ Loaded'; this.nextElementSibling.className='status success'"
-             onerror="this.nextElementSibling.textContent='❌ Failed'; this.nextElementSibling.className='status error'">
+             onload="console.log('Express promotion image loaded successfully'); this.nextElementSibling.textContent='✅ Loaded'; this.nextElementSibling.className='status success'"
+             onerror="console.error('Express promotion image failed to load:', this.src); this.nextElementSibling.textContent='❌ Failed - Check console'; this.nextElementSibling.className='status error'">
         <div class="status">Loading...</div>
+        <p><strong>Expected path:</strong> images/teams/express_promotion.jpg</p>
+        <p><strong>Full URL:</strong> <span id="fullUrl"></span></p>
     </div>
 
     <div class="image-test">
@@ -73,6 +75,20 @@
     </div>
 
     <script>
+        // Set the full URL for debugging
+        document.getElementById('fullUrl').textContent = window.location.origin + '/' + 'images/teams/express_promotion.jpg';
+        
+        // Test direct image loading
+        const testImg = new Image();
+        testImg.onload = function() {
+            console.log('✅ Direct Image() test: express_promotion.jpg loaded successfully');
+            console.log('Image dimensions:', this.naturalWidth, 'x', this.naturalHeight);
+        };
+        testImg.onerror = function() {
+            console.error('❌ Direct Image() test: express_promotion.jpg failed to load');
+        };
+        testImg.src = 'images/teams/express_promotion.jpg';
+        
         // Test the JavaScript function logic
         console.log('Testing image mapping functions...');
         

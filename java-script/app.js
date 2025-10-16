@@ -148,6 +148,8 @@ function getTeamBadgePath(teamName) {
 function getTeamAchievementImage(event) {
     if (!event.team) return null;
     
+    console.log('🔍 Getting achievement image for:', event.team, event.title);
+    
     // Map specific events to achievement images
     const achievementImages = {
         // KCCA FC championship/title events
@@ -172,8 +174,12 @@ function getTeamAchievementImage(event) {
         const eventText = (event.title + ' ' + event.description).toLowerCase();
         
         // Check if any keywords match the event content
-        if (teamData.keywords.some(keyword => eventText.includes(keyword))) {
+        const matchedKeyword = teamData.keywords.find(keyword => eventText.includes(keyword));
+        if (matchedKeyword) {
+            console.log(`✅ ${event.team}: Matched keyword '${matchedKeyword}' -> ${teamData.image}`);
             return teamData.image;
+        } else {
+            console.log(`❌ ${event.team}: No matching keywords in '${eventText}'`);
         }
     }
     
@@ -186,7 +192,9 @@ function getTeamAchievementImage(event) {
     };
     
     // First try general team images, then fall back to badges
-    return generalTeamImages[event.team] || getTeamBadgePath(event.team);
+    const fallbackImage = generalTeamImages[event.team] || getTeamBadgePath(event.team);
+    console.log(`🔄 ${event.team}: Using fallback image - ${fallbackImage}`);
+    return fallbackImage;
 }
 
 // Create Timeline Card
@@ -210,7 +218,7 @@ function createTimelineCard(event) {
             </div>
             <div class="timeline-image">
                 ${event.image || achievementImage
-                    ? `<img src="${event.image || achievementImage}" alt="${event.title}" loading="lazy" onerror="console.log('Timeline image failed:', this.src); this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    ? `<img src="${event.image || achievementImage}?v=${Date.now()}" alt="${event.title}" loading="lazy" onerror="console.error('Timeline image failed to load:', this.src); this.style.display='none'; this.nextElementSibling.style.display='flex'; this.nextElementSibling.querySelector('span').textContent='Image: ${(event.image || achievementImage).split('/').pop()}'">`
                        <div class="timeline-image-placeholder" style="display: none; background: linear-gradient(135deg, #0b6cff, #4f46e5); color: white; min-height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 2rem;">
                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>

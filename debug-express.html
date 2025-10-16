@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Express Image</title>
+    <style>
+        body { padding: 20px; font-family: Arial, sans-serif; }
+        .test { margin: 20px 0; padding: 20px; border: 1px solid #ccc; }
+        img { max-width: 300px; display: block; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>Debug Express Promotion Image</h1>
+    
+    <div class="test">
+        <h3>1. Copied Image Test (Root Level)</h3>
+        <img src="express_test.jpg" alt="Express Test Copy" 
+             onload="console.log('✅ Copied image loaded'); this.nextElementSibling.textContent='✅ Success'"
+             onerror="console.log('❌ Copied image failed'); this.nextElementSibling.textContent='❌ Failed'">
+        <p>Status: <span>Loading...</span></p>
+    </div>
+    
+    <div class="test">
+        <h3>2. Original Image (teams folder)</h3>
+        <img src="images/teams/express_promotion.jpg" alt="Express Original" 
+             onload="console.log('✅ Original image loaded'); this.nextElementSibling.textContent='✅ Success'"
+             onerror="console.log('❌ Original image failed'); this.nextElementSibling.textContent='❌ Failed'">
+        <p>Status: <span>Loading...</span></p>
+    </div>
+    
+    <div class="test">
+        <h3>3. Other Team Images for Comparison</h3>
+        <img src="images/teams/kcca_champions.jpg" alt="KCCA Champions" 
+             onload="this.nextElementSibling.textContent='✅ KCCA loaded'"
+             onerror="this.nextElementSibling.textContent='❌ KCCA failed'">
+        <p>KCCA: <span>Loading...</span></p>
+        
+        <img src="images/teams/vipers_double.jpg" alt="Vipers Double" 
+             onload="this.nextElementSibling.textContent='✅ Vipers loaded'"
+             onerror="this.nextElementSibling.textContent='❌ Vipers failed'">
+        <p>Vipers: <span>Loading...</span></p>
+    </div>
+    
+    <div class="test">
+        <h3>4. Path Information</h3>
+        <p>Current URL: <span id="currentUrl"></span></p>
+        <p>Expected Path: images/teams/express_promotion.jpg</p>
+        <p>Full URL: <span id="fullUrl"></span></p>
+    </div>
+
+    <script>
+        document.getElementById('currentUrl').textContent = window.location.href;
+        document.getElementById('fullUrl').textContent = 
+            new URL('images/teams/express_promotion.jpg', window.location.href).href;
+        
+        // Test with fetch API
+        console.log('Testing with fetch API...');
+        fetch('images/teams/express_promotion.jpg')
+            .then(response => {
+                console.log('Fetch response:', response);
+                if (response.ok) {
+                    console.log('✅ Fetch successful, status:', response.status);
+                    return response.blob();
+                } else {
+                    console.log('❌ Fetch failed, status:', response.status);
+                    throw new Error('Fetch failed');
+                }
+            })
+            .then(blob => {
+                console.log('✅ Blob created, size:', blob.size, 'type:', blob.type);
+            })
+            .catch(error => {
+                console.log('❌ Fetch error:', error);
+            });
+    </script>
+</body>
+</html>
