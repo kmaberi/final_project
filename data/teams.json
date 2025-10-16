@@ -9,7 +9,7 @@
       "capacity": 15000,
       "location": "Lugogo, Kampala",
       "league": "Uganda Premier League",
-      "badge": "images/teams/kcca-badge.png",
+      "badge": "images/teams/kccafc-badge.jpg",
       "stadiumImage": "images/stadiums/kcca-omondi-stadium.jpg",
       "description": "KCCA FC is one of Uganda's most successful football clubs, based in Kampala. Known for their attacking style of play and strong youth development program.",
       "achievements": [
@@ -79,7 +79,7 @@
       "capacity": 10000,
       "location": "Wankulukuku, Kampala",
       "league": "Uganda Premier League",
-      "badge": "images/teams/villa-badge.png",
+      "badge": "images/teams/scvilla-badge.png",
       "stadiumImage": "images/stadiums/nakivubo-stadium.jpg",
       "description": "SC Villa is one of Uganda's most historic clubs with a rich tradition and passionate fanbase known as the Villa Faithful.",
       "achievements": [
@@ -218,7 +218,7 @@
       "capacity": 5000,
       "location": "Njeru, Buikwe",
       "league": "Uganda Premier League",
-      "badge": "images/teams/busoga-badge.png",
+      "badge": "images/teams/busoga-budge.png",
       "stadiumImage": "images/stadiums/hoima-stadium.jpg",
       "description": "Busoga United is one of the newer clubs in Ugandan football, representing the Busoga region with pride and determination.",
       "achievements": [

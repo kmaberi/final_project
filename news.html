@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/news.css">
     <link rel="stylesheet" href="css/image-styles.css">
-    <link rel="stylesheet" href="css/about.css">    
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/stadium-styles.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 </head>
 <body>
@@ -240,6 +241,29 @@
 
                 <!-- Sidebar -->
                 <aside class="news-sidebar">
+                    <!-- Featured Stadium -->
+                    <div class="sidebar-widget stadium-widget">
+                        <h3>🏟️ Featured Stadium</h3>
+                        <div class="featured-stadium" id="featuredStadium">
+                            <div class="stadium-image">
+                                <img src="images/stadiums/st.mary's-stadium.jpg" alt="St. Mary's Stadium Kitende" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="stadium-image-placeholder" style="display: none; background: linear-gradient(135deg, #10b981, #059669); color: white; min-height: 150px; display: flex; align-items: center; justify-content: center; font-size: 2rem; border-radius: 0.5rem;">
+                                    🏟️
+                                </div>
+                            </div>
+                            <div class="stadium-info">
+                                <h4>St. Mary's Stadium Kitende</h4>
+                                <p class="stadium-details">
+                                    <strong>Capacity:</strong> 25,000<br>
+                                    <strong>Home:</strong> Vipers SC<br>
+                                    <strong>Location:</strong> Kitende, Wakiso
+                                </p>
+                                <p class="stadium-description">Modern stadium featuring state-of-the-art facilities, considered one of the best club stadiums in East Africa.</p>
+                                <a href="#" class="btn btn-sm btn-secondary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Trending Topics -->
                     <div class="sidebar-widget">
                         <h3>🔥 Trending Now</h3>

@@ -1,0 +1,203 @@
+{
+  "stadiums": [
+    {
+      "id": "mandela-national",
+      "name": "Mandela National Stadium",
+      "nickname": "Namboole",
+      "capacity": 45000,
+      "location": "Namboole, Wakiso",
+      "city": "Wakiso",
+      "region": "Central",
+      "opened": 1997,
+      "surface": "Natural grass",
+      "image": "images/stadiums/mandela-national-stadium.jpg",
+      "description": "Uganda's premier football stadium and the official home of the Uganda Cranes national team. Named after Nelson Mandela, it hosts major international matches and domestic cup finals.",
+      "homeTeams": ["Uganda Cranes", "URA FC", "SC Villa"],
+      "majorEvents": [
+        "AFCON Qualifiers",
+        "Uganda Cup Finals",
+        "CECAFA Cup matches",
+        "International friendlies"
+      ],
+      "facilities": [
+        "VIP lounges",
+        "Media facilities", 
+        "Player dressing rooms",
+        "Parking for 5000 vehicles"
+      ],
+      "coordinates": {
+        "lat": 0.3476,
+        "lng": 32.6227
+      }
+    },
+    {
+      "id": "st-marys-kitende",
+      "name": "St. Mary's Stadium Kitende",
+      "nickname": "The Fortress",
+      "capacity": 25000,
+      "location": "Kitende, Wakiso",
+      "city": "Kitende",
+      "region": "Central",
+      "opened": 2017,
+      "surface": "Natural grass",
+      "image": "images/stadiums/st.mary's-stadium.jpg",
+      "description": "Modern stadium owned by Vipers SC, featuring state-of-the-art facilities and considered one of the best club stadiums in East Africa.",
+      "homeTeams": ["Vipers SC"],
+      "majorEvents": [
+        "CAF Champions League matches",
+        "CAF Confederation Cup",
+        "Uganda Premier League",
+        "Training camps"
+      ],
+      "facilities": [
+        "Modern dressing rooms",
+        "Media center",
+        "Medical facilities",
+        "Training pitches",
+        "Floodlights"
+      ],
+      "coordinates": {
+        "lat": 0.1807,
+        "lng": 32.5025
+      }
+    },
+    {
+      "id": "phillip-omondi-stadium",
+      "name": "Phillip Omondi Stadium",
+      "nickname": "Lugogo",
+      "capacity": 10000,
+      "location": "Lugogo, Kampala",
+      "city": "Kampala",
+      "region": "Central",
+      "opened": 1954,
+      "surface": "Natural grass",
+      "image": "images/stadiums/kcca-omondi-stadium.jpg",
+      "description": "Historic stadium named after Ugandan football legend Phillip Omondi. Home to KCCA FC and hosts many domestic league matches.",
+      "homeTeams": ["KCCA FC"],
+      "majorEvents": [
+        "Uganda Premier League",
+        "Uganda Cup matches",
+        "Youth tournaments",
+        "Training sessions"
+      ],
+      "facilities": [
+        "Covered stands",
+        "Basic dressing rooms",
+        "Small media area",
+        "Training facilities"
+      ],
+      "coordinates": {
+        "lat": 0.3440,
+        "lng": 32.5875
+      }
+    },
+    {
+      "id": "wankulukuku-stadium",
+      "name": "Wankulukuku Stadium",
+      "nickname": "The Home",
+      "capacity": 10000,
+      "location": "Wankulukuku, Kampala",
+      "city": "Kampala",
+      "region": "Central",
+      "opened": 1928,
+      "surface": "Natural grass",
+      "image": "images/stadiums/nakivubo-stadium.jpg",
+      "description": "One of Uganda's oldest stadiums, traditionally home to SC Villa and Express FC. Rich in football history and local culture.",
+      "homeTeams": ["SC Villa", "Express FC"],
+      "majorEvents": [
+        "Uganda Premier League",
+        "Historic derby matches",
+        "Cup competitions",
+        "Community events"
+      ],
+      "facilities": [
+        "Traditional terracing",
+        "Basic facilities",
+        "Historic pavilion",
+        "Local vendor areas"
+      ],
+      "coordinates": {
+        "lat": 0.3110,
+        "lng": 32.5675
+      }
+    },
+    {
+      "id": "bombo-military-stadium",
+      "name": "Bombo Military Stadium",
+      "nickname": "The Barracks",
+      "capacity": 5000,
+      "location": "Bombo, Luweero",
+      "city": "Bombo",
+      "region": "Central",
+      "opened": 1965,
+      "surface": "Natural grass",
+      "image": "images/stadiums/hoima-stadium.jpg",
+      "description": "Military-owned stadium serving as home ground for UPDF FC. Features basic but well-maintained facilities.",
+      "homeTeams": ["UPDF FC"],
+      "majorEvents": [
+        "Uganda Premier League",
+        "Military tournaments",
+        "Training camps",
+        "Youth development"
+      ],
+      "facilities": [
+        "Military-standard facilities",
+        "Secure perimeter",
+        "Training areas",
+        "Basic seating"
+      ],
+      "coordinates": {
+        "lat": 0.5833,
+        "lng": 32.5333
+      }
+    },
+    {
+      "id": "fufa-technical-centre",
+      "name": "FUFA Technical Centre",
+      "nickname": "The Academy",
+      "capacity": 5000,
+      "location": "Njeru, Buikwe",
+      "city": "Njeru",
+      "region": "Eastern",
+      "opened": 2019,
+      "surface": "Artificial turf",
+      "image": "images/stadiums/hoima-stadium.jpg",
+      "description": "Modern training facility and stadium complex that serves as Uganda's national football development center.",
+      "homeTeams": ["BUL FC", "Busoga United"],
+      "majorEvents": [
+        "Uganda Premier League",
+        "Youth tournaments",
+        "National team training",
+        "Coaching courses"
+      ],
+      "facilities": [
+        "Multiple pitches",
+        "Modern gym",
+        "Accommodation blocks",
+        "Medical center",
+        "Artificial turf"
+      ],
+      "coordinates": {
+        "lat": 0.4167,
+        "lng": 33.1833
+      }
+    }
+  ],
+  "metadata": {
+    "total_stadiums": 6,
+    "total_capacity": 100000,
+    "regions_covered": ["Central", "Eastern"],
+    "oldest_stadium": {
+      "name": "Wankulukuku Stadium",
+      "year": 1928
+    },
+    "newest_stadium": {
+      "name": "FUFA Technical Centre", 
+      "year": 2019
+    },
+    "largest_stadium": {
+      "name": "Mandela National Stadium",
+      "capacity": 45000
+    }
+  }
+}

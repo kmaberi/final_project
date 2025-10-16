@@ -8,13 +8,13 @@ images/
 ├── logo.svg                    (Your main logo)
 ├── favicon.ico                 (Browser tab icon)
 ├── teams/
-│   ├── kcca-badge.png         (KCCA FC badge)
+│   ├── kccafc-badge.jpg       (KCCA FC badge)
 │   ├── vipers-badge.png       (Vipers SC badge)
-│   ├── villa-badge.png        (SC Villa badge)
+│   ├── scvilla-badge.png      (SC Villa badge)
 │   ├── express-badge.png      (Express FC badge)
 │   ├── ura-badge.png          (URA FC badge)
 │   ├── updf-badge.png         (UPDF FC badge)
-│   ├── busoga-badge.png       (Busoga United badge)
+│   ├── busoga-budge.png       (Busoga United badge)
 │   └── bul-badge.png          (BUL FC badge)
 ├── stadiums/
 │   ├── mtn-omondi-stadium.jpg
