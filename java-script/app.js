@@ -128,14 +128,17 @@ function getTeamBadgePath(teamName) {
     
     const teamBadgeMap = {
         'KCCA FC': 'images/teams/kccafc-badge.jpg',
-        'Vipers SC': 'images/teams/vipers-badge.png',
+        'Vipers SC': 'images/teams/vipers-badge.png', 
         'SC Villa': 'images/teams/scvilla-badge.png',
         'Express FC': 'images/teams/express-badge.png',
         'URA FC': 'images/teams/ura-badge.png',
         'UPDF FC': 'images/teams/updf-badge.png',
         'BUL FC': 'images/teams/bul-badge.png',
         'Busoga United': 'images/teams/busoga-budge.png',
-        'Uganda Cranes': 'images/teams/uganda-cranes-badge.png' // If you have it
+        'Uganda Cranes': 'images/teams/uganda-cranes-badge.png', // If you have it
+        // Additional team images we moved
+        'KCCA': 'images/teams/kccafc-badge.jpg', // Alternative name
+        'Vipers': 'images/teams/vipers-badge.png' // Alternative name
     };
     
     return teamBadgeMap[teamName] || null;
@@ -149,17 +152,17 @@ function getTeamAchievementImage(event) {
     const achievementImages = {
         // KCCA FC championship/title events
         'KCCA FC': {
-            keywords: ['champion', 'title', 'league', 'winner', 'trophy'],
+            keywords: ['champion', 'title', 'league', 'winner', 'trophy', 'championship', 'wins', 'success', 'continental'],
             image: 'images/teams/kcca_champions.jpg'
         },
         // Vipers SC double victory events
         'Vipers SC': {
-            keywords: ['double', 'champion', 'title', 'league', 'cup', 'winner'],
+            keywords: ['double', 'champion', 'title', 'league', 'cup', 'winner', 'victory', 'historic', 'achieves'],
             image: 'images/teams/vipers_double.jpg'
         },
         // Express FC promotion events
         'Express FC': {
-            keywords: ['promotion', 'promoted', 'return', 'top flight', 'premier league'],
+            keywords: ['promotion', 'promoted', 'return', 'returns', 'top flight', 'premier league', 'comeback', 'triumphant'],
             image: 'images/teams/express_promotion.jpg'
         }
     };
@@ -174,7 +177,16 @@ function getTeamAchievementImage(event) {
         }
     }
     
-    return null;
+    // Additional fallback images for teams without specific achievement images
+    const generalTeamImages = {
+        'KCCA FC': 'images/teams/kcca.jpg',
+        'Vipers SC': 'images/teams/vipers.jpg',
+        'SC Villa': 'images/teams/scvilla-badge.png',
+        'Uganda Cranes': 'images/teams/uganda-cranes-badge.png'
+    };
+    
+    // First try general team images, then fall back to badges
+    return generalTeamImages[event.team] || getTeamBadgePath(event.team);
 }
 
 // Create Timeline Card
@@ -198,8 +210,8 @@ function createTimelineCard(event) {
             </div>
             <div class="timeline-image">
                 ${event.image || achievementImage
-                    ? `<img src="${event.image || achievementImage}" alt="${event.title}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                       <div class="timeline-image-placeholder" style="display: none;">
+                    ? `<img src="${event.image || achievementImage}" alt="${event.title}" loading="lazy" onerror="console.log('Timeline image failed:', this.src); this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                       <div class="timeline-image-placeholder" style="display: none; background: linear-gradient(135deg, #0b6cff, #4f46e5); color: white; min-height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 2rem;">
                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
                                <line x1="3" y1="9" x2="21" y2="9"/>
@@ -207,7 +219,7 @@ function createTimelineCard(event) {
                            </svg>
                            <span>📸</span>
                        </div>`
-                    : `<div class="timeline-image-placeholder">
+                    : `<div class="timeline-image-placeholder" style="background: linear-gradient(135deg, #6b7280, #9ca3af); color: white; min-height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 2rem;">
                         <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
                             <line x1="3" y1="9" x2="21" y2="9"/>

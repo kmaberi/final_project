@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Team Images</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .image-test { margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 8px; }
+        .image-test img { max-width: 200px; height: auto; display: block; margin: 10px 0; }
+        .status { padding: 5px 10px; border-radius: 4px; font-size: 14px; }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+    <h1>Team Images Test</h1>
+    
+    <div class="image-test">
+        <h3>KCCA Champions Image</h3>
+        <img src="images/teams/kcca_champions.jpg" alt="KCCA Champions" 
+             onload="this.nextElementSibling.textContent='✅ Loaded'; this.nextElementSibling.className='status success'"
+             onerror="this.nextElementSibling.textContent='❌ Failed'; this.nextElementSibling.className='status error'">
+        <div class="status">Loading...</div>
+    </div>
+
+    <div class="image-test">
+        <h3>Vipers Double Image</h3>
+        <img src="images/teams/vipers_double.jpg" alt="Vipers Double" 
+             onload="this.nextElementSibling.textContent='✅ Loaded'; this.nextElementSibling.className='status success'"
+             onerror="this.nextElementSibling.textContent='❌ Failed'; this.nextElementSibling.className='status error'">
+        <div class="status">Loading...</div>
+    </div>
+
+    <div class="image-test">
+        <h3>Express Promotion Image</h3>
+        <img src="images/teams/express_promotion.jpg" alt="Express Promotion" 
+             onload="this.nextElementSibling.textContent='✅ Loaded'; this.nextElementSibling.className='status success'"
+             onerror="this.nextElementSibling.textContent='❌ Failed'; this.nextElementSibling.className='status error'">
+        <div class="status">Loading...</div>
+    </div>
+
+    <div class="image-test">
+        <h3>KCCA Team Image</h3>
+        <img src="images/teams/kcca.jpg" alt="KCCA Team" 
+             onload="this.nextElementSibling.textContent='✅ Loaded'; this.nextElementSibling.className='status success'"
+             onerror="this.nextElementSibling.textContent='❌ Failed'; this.nextElementSibling.className='status error'">
+        <div class="status">Loading...</div>
+    </div>
+
+    <div class="image-test">
+        <h3>Vipers Team Image</h3>
+        <img src="images/teams/vipers.jpg" alt="Vipers Team" 
+             onload="this.nextElementSibling.textContent='✅ Loaded'; this.nextElementSibling.className='status success'"
+             onerror="this.nextElementSibling.textContent='❌ Failed'; this.nextElementSibling.className='status error'">
+        <div class="status">Loading...</div>
+    </div>
+
+    <div class="image-test">
+        <h3>KCCA Badge</h3>
+        <img src="images/teams/kccafc-badge.jpg" alt="KCCA Badge" 
+             onload="this.nextElementSibling.textContent='✅ Loaded'; this.nextElementSibling.className='status success'"
+             onerror="this.nextElementSibling.textContent='❌ Failed'; this.nextElementSibling.className='status error'">
+        <div class="status">Loading...</div>
+    </div>
+
+    <div class="image-test">
+        <h3>Vipers Badge</h3>
+        <img src="images/teams/vipers-badge.png" alt="Vipers Badge" 
+             onload="this.nextElementSibling.textContent='✅ Loaded'; this.nextElementSibling.className='status success'"
+             onerror="this.nextElementSibling.textContent='❌ Failed'; this.nextElementSibling.className='status error'">
+        <div class="status">Loading...</div>
+    </div>
+
+    <script>
+        // Test the JavaScript function logic
+        console.log('Testing image mapping functions...');
+        
+        // Simulate the functions from app.js
+        const teamBadgeMap = {
+            'KCCA FC': 'images/teams/kccafc-badge.jpg',
+            'Vipers SC': 'images/teams/vipers-badge.png'
+        };
+        
+        const achievementImages = {
+            'KCCA FC': {
+                keywords: ['champion', 'title', 'league', 'winner', 'trophy', 'championship', 'wins', 'success', 'continental'],
+                image: 'images/teams/kcca_champions.jpg'
+            },
+            'Vipers SC': {
+                keywords: ['double', 'champion', 'title', 'league', 'cup', 'winner', 'victory', 'historic', 'achieves'],
+                image: 'images/teams/vipers_double.jpg'
+            },
+            'Express FC': {
+                keywords: ['promotion', 'promoted', 'return', 'returns', 'top flight', 'premier league', 'comeback', 'triumphant'],
+                image: 'images/teams/express_promotion.jpg'
+            }
+        };
+        
+        // Test events
+        const testEvents = [
+            { team: 'KCCA FC', title: 'KCCA FC Wins Championship', description: 'KCCA secured their title' },
+            { team: 'Vipers SC', title: 'Vipers Achieves Double', description: 'Historic victory for Vipers' },
+            { team: 'Express FC', title: 'Express Returns', description: 'Express promoted to premier league' }
+        ];
+        
+        testEvents.forEach(event => {
+            const eventText = (event.title + ' ' + event.description).toLowerCase();
+            const teamData = achievementImages[event.team];
+            if (teamData && teamData.keywords.some(keyword => eventText.includes(keyword))) {
+                console.log(`✅ ${event.team}: Should show achievement image - ${teamData.image}`);
+            } else {
+                console.log(`🔄 ${event.team}: Will show badge - ${teamBadgeMap[event.team]}`);
+            }
+        });
+    </script>
+</body>
+</html>
