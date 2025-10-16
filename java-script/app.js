@@ -122,31 +122,114 @@ async function loadFeaturedTeamsSection() {
     }
 }
 
+// Get team badge path from team name
+function getTeamBadgePath(teamName) {
+    if (!teamName) return null;
+    
+    const teamBadgeMap = {
+        'KCCA FC': 'images/teams/kccafc-badge.jpg',
+        'Vipers SC': 'images/teams/vipers-badge.png',
+        'SC Villa': 'images/teams/scvilla-badge.png',
+        'Express FC': 'images/teams/express-badge.png',
+        'URA FC': 'images/teams/ura-badge.png',
+        'UPDF FC': 'images/teams/updf-badge.png',
+        'BUL FC': 'images/teams/bul-badge.png',
+        'Busoga United': 'images/teams/busoga-budge.png',
+        'Uganda Cranes': 'images/teams/uganda-cranes-badge.png' // If you have it
+    };
+    
+    return teamBadgeMap[teamName] || null;
+}
+
+// Get team achievement image based on event context
+function getTeamAchievementImage(event) {
+    if (!event.team) return null;
+    
+    // Map specific events to achievement images
+    const achievementImages = {
+        // KCCA FC championship/title events
+        'KCCA FC': {
+            keywords: ['champion', 'title', 'league', 'winner', 'trophy'],
+            image: 'images/teams/kcca_champions.jpg'
+        },
+        // Vipers SC double victory events
+        'Vipers SC': {
+            keywords: ['double', 'champion', 'title', 'league', 'cup', 'winner'],
+            image: 'images/teams/vipers_double.jpg'
+        },
+        // Express FC promotion events
+        'Express FC': {
+            keywords: ['promotion', 'promoted', 'return', 'top flight', 'premier league'],
+            image: 'images/teams/express_promotion.jpg'
+        }
+    };
+    
+    if (achievementImages[event.team]) {
+        const teamData = achievementImages[event.team];
+        const eventText = (event.title + ' ' + event.description).toLowerCase();
+        
+        // Check if any keywords match the event content
+        if (teamData.keywords.some(keyword => eventText.includes(keyword))) {
+            return teamData.image;
+        }
+    }
+    
+    return null;
+}
+
 // Create Timeline Card
 function createTimelineCard(event) {
+    const teamBadge = getTeamBadgePath(event.team);
+    const achievementImage = getTeamAchievementImage(event);
+    
      return `
         <div class="timeline-card" data-id="${event.id}">
             <div class="timeline-card-header">
                 <div class="timeline-year">${event.year}</div>
-                <svg class="timeline-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M6 9l6 6 6-6"/>
-                </svg>
+                ${teamBadge ? `
+                    <div class="timeline-team-badge">
+                        <img src="${teamBadge}" alt="${event.team}" loading="lazy" onerror="this.style.display='none'">
+                    </div>
+                ` : `
+                    <svg class="timeline-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                `}
             </div>
             <div class="timeline-image">
-
-
-                ${event.image 
-                    ? `<img src="${event.image}" alt="${event.title}" loading="lazy">` 
-                    : `<svg class="timeline-image-placeholder" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                        <line x1="3" y1="9" x2="21" y2="9"/>
-                        <line x1="9" y1="21" x2="9" y2="9"/>
-                    </svg>`}
+                ${event.image || achievementImage
+                    ? `<img src="${event.image || achievementImage}" alt="${event.title}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                       <div class="timeline-image-placeholder" style="display: none;">
+                           <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                               <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                               <line x1="3" y1="9" x2="21" y2="9"/>
+                               <line x1="9" y1="21" x2="9" y2="9"/>
+                           </svg>
+                           <span>📸</span>
+                       </div>`
+                    : `<div class="timeline-image-placeholder">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="3" y1="9" x2="21" y2="9"/>
+                            <line x1="9" y1="21" x2="9" y2="9"/>
+                        </svg>
+                        <span>📸</span>
+                    </div>`}
             </div>
             <div class="timeline-content">
                 <h3 class="timeline-title">${event.title}</h3>
                 <p class="timeline-description">${event.description}</p>
-                ${event.team ? `<span class="timeline-team">${event.team}</span>` : ''}
+                ${event.team ? `
+                    <div class="timeline-team-info">
+                        ${teamBadge ? `
+                            <div class="timeline-team-badge-small">
+                                <img src="${teamBadge}" alt="${event.team}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'">
+                                <span style="display: none;">⚽</span>
+                            </div>
+                        ` : '<span class="team-icon">⚽</span>'}
+                        <span class="timeline-team">${event.team}</span>
+                    </div>
+                ` : ''}
             </div>
         </div>
     `;
@@ -156,17 +239,37 @@ function createTimelineCard(event) {
 function createTeamCard(team) {
     return `
         <div class="team-card" data-id="${team.id}">
-            <div class="team-badge">
-                ${team.badge 
-                    ? `<img src="${team.badge}" alt="${team.name}" loading="lazy">` 
-                    : `<svg class="team-badge-placeholder" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polygon points="10 8 16 12 10 16 10 8"></polygon>
-                    </svg>`}
+            <div class="team-card-header">
+                <div class="team-badge">
+                    ${team.badge 
+                        ? `<img src="${team.badge}" alt="${team.name}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">` 
+                        : ''}
+                    <div class="team-badge-placeholder" style="${team.badge ? 'display: none;' : 'display: flex;'} align-items: center; justify-content: center; width: 60px; height: 60px; background: linear-gradient(135deg, #0b6cff, #4f46e5); border-radius: 50%; color: white; font-size: 1.5rem;">
+                        ⚽
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h3 class="team-name">${team.name}</h3>
+                    <p class="team-league">${team.league || 'Uganda Premier League'}</p>
+                </div>
             </div>
-            <h3 class="team-name">${team.name}</h3>
-            <p class="team-stadium">${team.stadium || 'Stadium TBA'}</p>
-            <p class="team-founded">Founded: ${team.founded || 'Unknown'}</p>
+            <div class="team-details">
+                <div class="team-detail-item">
+                    <span class="team-detail-icon">🏟️</span>
+                    <span class="team-detail-text">${team.stadium || 'Stadium TBA'}</span>
+                </div>
+                <div class="team-detail-item">
+                    <span class="team-detail-icon">📅</span>
+                    <span class="team-detail-text">Founded ${team.founded || 'Unknown'}</span>
+                </div>
+                <div class="team-detail-item">
+                    <span class="team-detail-icon">🏆</span>
+                    <span class="team-detail-text">${team.achievements ? team.achievements.length + ' Titles' : 'Premier League Club'}</span>
+                </div>
+            </div>
+            <div class="team-card-footer">
+                <span class="view-details-btn">View Details →</span>
+            </div>
         </div>
     `;
 }

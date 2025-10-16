@@ -159,8 +159,8 @@ function getSampleEvents() {
         {
             id: 1,
             year: 2023,
-            title: 'KCCA FC Wins Uganda Premier League',
-            description: 'KCCA FC secured their 13th Uganda Premier League title with a commanding performance throughout the season.',
+            title: 'KCCA FC Wins Uganda Premier League Championship',
+            description: 'KCCA FC secured their 13th Uganda Premier League title with a commanding performance throughout the season, celebrating their championship victory.',
             image: null,
             source: 'Uganda Football Federation',
             tags: ['league', 'championship'],
@@ -169,12 +169,12 @@ function getSampleEvents() {
         },
         {
             id: 2,
-            year: 2020,
-            title: 'Vipers SC Dominates Local Football',
-            description: 'Vipers SC established themselves as the dominant force in Ugandan football, winning multiple titles.',
+            year: 2022,
+            title: 'Vipers SC Achieves Historic Double Victory',
+            description: 'Vipers SC made history by winning both the Uganda Premier League and the Uganda Cup in the same season, achieving a remarkable double.',
             image: null,
             source: 'FUFA',
-            tags: ['league', 'success'],
+            tags: ['league', 'cup', 'double'],
             team: 'Vipers SC',
             type: 'league'
         },
@@ -202,14 +202,14 @@ function getSampleEvents() {
         },
         {
             id: 5,
-            year: 2010,
-            title: 'Express FC Wins Uganda Cup',
-            description: 'Express FC lifted the prestigious Uganda Cup trophy in a thrilling final.',
+            year: 2021,
+            title: 'Express FC Returns to Premier League',
+            description: 'Express FC made a triumphant return to the Uganda Premier League after successful promotion, marking the comeback of one of Uganda\'s most historic clubs.',
             image: null,
             source: 'FUFA',
-            tags: ['cup', 'victory'],
+            tags: ['promotion', 'return'],
             team: 'Express FC',
-            type: 'cup'
+            type: 'league'
         },
         {
             id: 6,
@@ -228,51 +228,51 @@ function getSampleEvents() {
 function getSampleTeams() {
     return [
         {
-            id: 1,
+            id: 'kcca',
             name: 'KCCA FC',
             stadium: 'Phillip Omondi Stadium',
-            founded: '1963',
-            badge: null,
+            founded: 1963,
+            badge: 'images/teams/kccafc-badge.jpg',
             league: 'Uganda Premier League'
         },
         {
-            id: 2,
+            id: 'vipers',
             name: 'Vipers SC',
-            stadium: 'St. Mary\'s Stadium',
-            founded: '2013',
-            badge: null,
+            stadium: 'St. Mary\'s Stadium Kitende',
+            founded: 2013,
+            badge: 'images/teams/vipers-badge.png',
             league: 'Uganda Premier League'
         },
         {
-            id: 3,
+            id: 'villa',
             name: 'SC Villa',
-            stadium: 'Mandela National Stadium',
-            founded: '1975',
-            badge: null,
+            stadium: 'Wankulukuku Stadium',
+            founded: 1975,
+            badge: 'images/teams/scvilla-badge.png',
             league: 'Uganda Premier League'
         },
         {
-            id: 4,
+            id: 'express',
             name: 'Express FC',
             stadium: 'Wankulukuku Stadium',
-            founded: '1957',
-            badge: null,
+            founded: 1957,
+            badge: 'images/teams/express-badge.png',
             league: 'Uganda Premier League'
         },
         {
-            id: 5,
+            id: 'ura',
             name: 'URA FC',
-            stadium: 'Mehta Stadium',
-            founded: '1992',
-            badge: null,
+            stadium: 'Mandela National Stadium',
+            founded: 1992,
+            badge: 'images/teams/ura-badge.png',
             league: 'Uganda Premier League'
         },
         {
-            id: 6,
+            id: 'updf',
             name: 'UPDF FC',
-            stadium: 'Bombo Military Barracks',
-            founded: '2006',
-            badge: null,
+            stadium: 'Bombo Military Stadium',
+            founded: 2007,
+            badge: 'images/teams/updf-badge.png',
             league: 'Uganda Premier League'
         }
     ];
